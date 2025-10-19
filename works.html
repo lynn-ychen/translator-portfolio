@@ -1,1 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Works · Lynn</title>
+<meta name="theme-color" content="#ffffff">
+<style>
+:root{--ink:#111827;--muted:#667085;--line:#e5e7eb;--card:#fff;--brand:#2563eb;--max:1040px;--radius:16px;--shadow:0 8px 30px rgba(2,6,23,.06)}
+*{box-sizing:border-box} body{margin:0;font:16px/1.7 ui-sans-serif,system-ui,Segoe UI,Arial;color:var(--ink)}
+a{color:var(--brand);text-decoration:none}
+.nav{position:sticky;top:0;background:#ffffffcc;backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.container{max-width:var(--max);margin:auto;padding:24px}
+.nav-inner{display:flex;align-items:center;justify-content:space-between}
+.links a{color:#667085;padding:10px 12px;border-radius:10px}
+.links a:hover{background:#f5f7fb;color:var(--ink)}
+.section{padding:28px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}
+.work-thumb{width:100%;height:140px;background:#eef2f7;border-radius:12px;margin-bottom:10px}
+.footer{border-top:1px solid var(--line);margin-top:24px;padding:24px 0;color:var(--muted)}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.filters button{padding:6px 10px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer}
+.filters button.active{border-color:var(--brand);background:#eef4ff}
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="container nav-inner">
+    <div><a href="index.html">← Home</a></div>
+    <nav class="links">
+      <a href="index.html" data-i18n="nav_home"></a>
+      <a href="about.html" data-i18n="nav_about"></a>
+      <a href="works.html" data-i18n="nav_works"></a>
+      <a href="#contact" data-i18n="nav_contact"></a>
+    </nav>
+    <div>
+      <button data-lang="en">EN</button>
+      <button data-lang="zh">中文</button>
+      <button data-lang="ja">日本語</button>
+    </div>
+  </div>
+</div>
 
+<div class="container">
+  <section class="section">
+    <h2 data-i18n="works_title"></h2>
+
+    <div class="filters">
+      <button class="active" data-filter="all" data-i18n="filter_all"></button>
+      <button data-filter="ja-zh" data-i18n="filter_ja_zh"></button>
+      <button data-filter="en-zh" data-i18n="filter_en_zh"></button>
+      <button data-filter="zh-ja" data-i18n="filter_zh_ja"></button>
+      <button data-filter="zh-en" data-i18n="filter_zh_en"></button>
+    </div>
+
+    <div class="grid">
+      <article id="item1" class="card" data-tag="ja-zh">
+        <div class="work-thumb"></div>
+        <h3>RPG UI 文本本地化</h3>
+        <p>JA→ZH · 发行商：XXXX · 发售：2024-06</p>
+        <p><b data-i18n="works_role"></b>：翻译 / 术语表 / LQA</p>
+      </article>
+
+      <article id="item2" class="card" data-tag="en-zh">
+        <div class="work-thumb"></div>
+        <h3>条款与隐私政策</h3>
+        <p>EN→ZH · 客户：XXXX · 发布：2023-11</p>
+        <p><b data-i18n="works_role"></b>：翻译 / 审校</p>
+      </article>
+
+      <article id="item3" class="card" data-tag="zh-ja">
+        <div class="work-thumb"></div>
+        <h3>商店页文案</h3>
+        <p>ZH→JA · 应用：XXXX · 上线：2022-09</p>
+        <p><b data-i18n="works_role"></b>：本地化 / A/B测试</p>
+      </article>
+
+      <article id="item4" class="card" data-tag="zh-en">
+        <div class="work-thumb"></div>
+        <h3>游戏新闻稿</h3>
+        <p>ZH→EN · 媒体：XXXX · 发布：2021-03</p>
+        <p><b data-i18n="works_role"></b>：翻译</p>
+      </article>
+    </div>
+  </section>
+
+  <footer id="contact" class="footer">
+    <h3 data-i18n="contact"></h3>
+    <p><b data-i18n="email"></b>：<a href="mailto:lynn.ychen@outlook.com">lynn.ychen@outlook.com</a></p>
+  </footer>
+</div>
+
+<script>
+const I18N={en:{nav_home:"Home",nav_about:"About",nav_works:"Works",nav_contact:"Contact",
+works_title:"Works",works_role:"Role",contact:"Contact",email:"Email",
+filter_all:"All",filter_ja_zh:"JA→ZH",filter_en_zh:"EN→ZH",filter_zh_ja:"ZH→JA",filter_zh_en:"ZH→EN"},
+zh:{nav_home:"首页",nav_about:"自我介绍",nav_works:"作品一览",nav_contact:"联系",
+works_title:"作品一览",works_role:"我参与的工作",contact:"联系方式",email:"电子邮箱",
+filter_all:"全部",filter_ja_zh:"日翻中",filter_en_zh:"英翻中",filter_zh_ja:"中翻日",filter_zh_en:"中翻英"},
+ja:{nav_home:"ホーム",nav_about:"自己紹介",nav_works:"実績一覧",nav_contact:"連絡先",
+works_title:"実績一覧",works_role:"担当業務",contact:"連絡先",email:"メール",
+filter_all:"すべて",filter_ja_zh:"日→中",filter_en_zh:"英→中",filter_zh_ja:"中→日",filter_zh_en:"中→英"}};
+function pick(){const qp=new URL(location.href).searchParams.get("lang");if(qp)return qp.split("-")[0];const s=localStorage.getItem("lang");if(s)return s;const n=(navigator.language||"en").split("-")[0];return ["zh","ja","en"].includes(n)?n:"en";}
+function apply(lang){const d=I18N[lang]||I18N.en;document.querySelectorAll("[data-i18n]").forEach(el=>{const k=el.getAttribute("data-i18n");el.innerText=(d[k]||k);});localStorage.setItem("lang",lang);}
+function setupFilters(){const btns=document.querySelectorAll(".filters button"),items=document.querySelectorAll(".card[data-tag]");
+btns.forEach(b=>b.addEventListener("click",()=>{btns.forEach(x=>x.classList.remove("active"));b.classList.add("active");
+const f=b.getAttribute("data-filter");items.forEach(it=>{const tag=it.getAttribute("data-tag");it.style.display=(f==="all"||f===tag)?"":"none";});}));}
+document.addEventListener("DOMContentLoaded",()=>{apply(pick());setupFilters();document.querySelectorAll("[data-lang]").forEach(b=>b.addEventListener("click",()=>apply(b.getAttribute("data-lang"))));});
+</script>
+</body>
+</html>
