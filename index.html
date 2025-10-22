@@ -1,82 +1,12 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Lynn · Translator Portfolio</title>
 <meta name="theme-color" content="#ffffff">
-<style>
-:root{
-  --ink:#111827;--muted:#667085;--line:#e5e7eb;--card:#fff;
-  --brand:#2563eb;--max:1040px;--radius:16px;
-  --shadow:0 8px 30px rgba(2,6,23,.06);
-  /* 背景图：顶部与底部各自独立 */
-  --hero:url("https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop");
-  --footer:url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1600&auto=format&fit=crop");
-}
-*{box-sizing:border-box} html{scroll-behavior:smooth}
-body{margin:0;font:16px/1.7 ui-sans-serif,system-ui,Segoe UI,Arial;color:var(--ink);background:#fff}
-a{color:var(--brand);text-decoration:none} a:hover{opacity:.9}
-.container{max-width:var(--max);margin:auto;padding:24px}
-
-/* 顶部导航 */
-.nav{position:sticky;top:0;background:#ffffffcc;backdrop-filter:blur(8px);
-  border-bottom:1px solid var(--line);z-index:10}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px}
-.logo{display:flex;align-items:center;gap:10px;font-weight:700}
-.logo .dot{width:12px;height:12px;border-radius:50%;
-  background:linear-gradient(180deg,#60a5fa,#34d399);display:inline-block;border:1px solid #dbe3ef}
-.links a{color:var(--muted);padding:10px 12px;border-radius:10px}
-.links a:hover{background:#f5f7fb;color:var(--ink)}
-.langs{display:flex;gap:8px}
-.langs button{background:#fff;border:1px solid var(--line);color:var(--ink);padding:8px 10px;border-radius:10px;cursor:pointer}
-.langs button.active{border-color:var(--brand)}
-
-/* 顶部横幅 */
-.hero-banner{position:relative;background-image:var(--hero);
-  background-size:cover;background-position:center;min-height:420px;
-  display:flex;align-items:center;justify-content:center;text-align:center}
-.hero-banner::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.45);z-index:0}
-.hero-content{position:relative;z-index:1;color:#fff;padding:40px 16px;max-width:900px;text-shadow:0 2px 8px rgba(0,0,0,.35)}
-.hero-content h1{font-size:44px;margin:0 0 10px}
-.hero-content p{margin:0 0 18px;opacity:.95}
-.cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:12px;
-  border:1px solid #ffffff80;background:#ffffff1f;color:#fff;cursor:pointer}
-.btn.primary{background:#1d4ed8;border-color:#163fa6}
-@media(max-width:640px){.hero-content h1{font-size:30px}.hero-banner{min-height:360px}}
-
-/* 中间模块 */
-.section{padding:28px 0}
-h2{font-size:22px;margin:0 0 14px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}
-.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px}
-.kpi{background:#f8fafc;border:1px solid var(--line);border-radius:16px;padding:14px;text-align:center}
-.kpi b{font-size:26px;display:block}
-.adv-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.adv{display:flex;flex-direction:column;gap:8px;min-height:160px}
-.work-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
-.work{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
-.work img{width:100%;height:120px;object-fit:cover;display:block;background:#eef2f7}
-.work .meta{padding:10px;font-size:13px;color:var(--muted)}
-.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
-.filters button{padding:6px 10px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer}
-.filters button.active{border-color:var(--brand);background:#eef4ff}
-
-/* 底部 Contact：整幅背景 + 居中文字 */
-.footer{
-  position:relative;background-image:var(--footer);
-  background-size:cover;background-position:center;
-  text-align:center;color:#fff;margin-top:40px;padding:80px 16px;
-}
-.footer::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.55);z-index:0}
-.footer-content{position:relative;z-index:1;max-width:700px;margin:auto}
-.footer h2{font-size:28px;margin-bottom:8px}
-.footer p{margin:6px 0}
-.footer a{color:#93c5fd;text-decoration:none}
-.footer a:hover{text-decoration:underline}
-.small{font-size:13px;margin-top:12px;color:#cbd5e1}
-</style>
+<!-- 关联外部样式表 -->
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
@@ -92,7 +22,7 @@ h2{font-size:22px;margin:0 0 14px}
     </nav>
     <div class="langs">
       <button data-lang="en">EN</button>
-      <button data-lang="zh">中文</button>
+      <button data-lang="zh">简体中文</button>
       <button data-lang="ja">日本語</button>
     </div>
   </div>
@@ -110,16 +40,19 @@ h2{font-size:22px;margin:0 0 14px}
   </div>
 </section>
 
+<!-- KPIs -->
 <div class="container">
   <section class="section">
     <div class="kpis">
       <div class="kpi"><b>9</b><span data-i18n="kpi_years"></span></div>
       <div class="kpi"><b>30+</b><span data-i18n="kpi_games"></span></div>
       <div class="kpi"><b>8</b><span data-i18n="kpi_books"></span></div>
+      <div class="kpi"><b>70+</b><span data-i18n="kpi_reviews"></span></div>
       <div class="kpi"><b>3M+</b><span data-i18n="kpi_allwords"></span></div>
     </div>
   </section>
 
+<!-- 翻译理念 -->
   <section class="section">
     <h2 data-i18n="advantages"></h2>
     <div class="adv-list">
@@ -130,25 +63,56 @@ h2{font-size:22px;margin:0 0 14px}
     </div>
   </section>
 
+<!-- 作品展示区 -->
   <section class="section">
-    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
-      <h2 data-i18n="showcase"></h2>
-      <a class="btn" href="works.html" data-i18n="more_works"></a>
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:20px">
+    <h2 data-i18n="showcase"></h2>
+    <a class="btn" href="works.html" data-i18n="more_works"></a>
+  </div>
+  
+  <!-- 横向滚动展示区 -->
+  <div class="showcase-scroll">
+    <div class="showcase-container">
+      <!-- 项目 1 -->
+      <div class="showcase-item" data-target="item1" data-tag="ja-zh">
+        <div class="showcase-image">Project 1 Image</div>
+        <div class="showcase-content">
+          <h4 data-i18n="showcase1_title">Testing Project 1</h4>
+          <div class="showcase-meta" data-i18n="showcase1_desc">JA→ZH · Game Localization</div>
+        </div>
+      </div>
+      
+      <!-- 项目 2 -->
+      <div class="showcase-item" data-target="item2" data-tag="en-zh">
+        <div class="showcase-image">Project 2 Image</div>
+        <div class="showcase-content">
+          <h4 data-i18n="showcase2_title">Testing Project 2</h4>
+          <div class="showcase-meta" data-i18n="showcase2_desc">EN→ZH · Software Localization</div>
+        </div>
+      </div>
+      
+      <!-- 项目 3 -->
+      <div class="showcase-item" data-target="item3" data-tag="zh-ja">
+        <div class="showcase-image">Project 3 Image</div>
+        <div class="showcase-content">
+          <h4 data-i18n="showcase3_title">Testing Project 3</h4>
+          <div class="showcase-meta" data-i18n="showcase3_desc">ZH→JA · Book Translation</div>
+        </div>
+      </div>
+      
+      <!-- 项目 4 -->
+      <div class="showcase-item" data-target="item4" data-tag="zh-en">
+        <div class="showcase-image">Project 4 Image</div>
+        <div class="showcase-content">
+          <h4 data-i18n="showcase4_title">Testing Project 4</h4>
+          <div class="showcase-meta" data-i18n="showcase4_desc">ZH→EN · Technical Document</div>
+        </div>
+      </div>
+      
+      <!-- 可以添加更多项目 -->
     </div>
-    <div class="filters">
-      <button class="active" data-filter="all" data-i18n="filter_all"></button>
-      <button data-filter="ja-zh" data-i18n="filter_ja_zh"></button>
-      <button data-filter="en-zh" data-i18n="filter_en_zh"></button>
-      <button data-filter="zh-ja" data-i18n="filter_zh_ja"></button>
-      <button data-filter="zh-en" data-i18n="filter_zh_en"></button>
-    </div>
-    <div class="work-grid">
-      <a class="work" data-tag="ja-zh" href="works.html#item1"><img alt=""><div class="meta">JA→ZH · testing1</div></a>
-      <a class="work" data-tag="en-zh" href="works.html#item2"><img alt=""><div class="meta">EN→ZH · testing2</div></a>
-      <a class="work" data-tag="zh-ja" href="works.html#item3"><img alt=""><div class="meta">ZH→JA · testing3</div></a>
-      <a class="work" data-tag="zh-en" href="works.html#item4"><img alt=""><div class="meta">ZH→EN · testing4</div></a>
-    </div>
-  </section>
+  </div>
+</section>
 </div>
 
 <!-- 底部联系方式：整幅背景图居中 -->
@@ -161,51 +125,6 @@ h2{font-size:22px;margin:0 0 14px}
   </div>
 </footer>
 
-<script>
-const I18N={
-  zh:{nav_home:"首页",nav_about:"关于",nav_works:"作品一览",nav_contact:"联系我",
-      hero_hi:"你好，我是 Lynn！\n一位专注于“说人话”的译员",
-      hero_sub:"日 / 英 ➡ 简中｜翻译 · 本地化 · LQA",
-      hero_more:"了解更多",hero_contact:"联系我",
-      kpi_years:"9年译海浮沉",kpi_games:"参与游戏",kpi_books:"译著书籍",kpi_allwords:"总翻译字数",
-      advantages:"我的翻译特色",adv1_t:"“戴着镣铐跳舞”",adv1_d:"忠于原文，但更忠于作品的灵魂。拒绝逐字对译，必要时用创译还原角色个性与作品氛围。",
-      adv2_t:"是译者亦是观众",adv2_d:"爱读书，也爱玩游戏，时常跳出译者的身份，用观者的角度思考并打磨出最重视他们感受的译文。",
-      adv3_t:"民汉出身的专业译者",adv3_d:"从为爱发电到以译谋生，对第九艺术的热爱使我对译作与原作的高契合度有着天然的追求。",
-      adv4_t:"太晚了脑子不转了",adv4_d:"最后一点等我想到了再加。",showcase:"作品展示",
-      filter_all:"全部",filter_ja_zh:"日翻中",filter_en_zh:"英翻中",filter_zh_ja:"中翻日",filter_zh_en:"中翻英",
-      more_works:"查看作品一览",contact:"联系方式",footer_note:"© {year} Lynn"},
-  en:{nav_home:"Home",nav_about:"About Me",nav_works:"Works",nav_contact:"Contact",
-      hero_hi:"Hi, I'm Lynn! \n a translator who makes words sound just right.",
-      hero_sub:"JA / EN ➡ ZHCN｜Translation · Localization · LQA",
-      hero_more:"Find out More",hero_contact:"Contact Me",
-      kpi_years:"Years in Industry",kpi_games:"Games",kpi_books:"Books",kpi_allwords:"Total Translated Words",
-      advantages:"Features",adv1_t:"Context-first Localization",adv1_d:"Restore character voice & tone.",
-      adv2_t:"From the Player’s View",adv2_d:"Translations that truly speak to the audience.",
-      adv3_t:"From Fan Tranlsator to Pro",adv3_d:"Born from passion, driven by craft and quality.",
-      adv4_t:"Add later",adv4_d:"It's mid-night now. I'll come back after my brain gets some proper rest lol.",showcase:"Showcase",
-      filter_all:"All",filter_ja_zh:"JA→ZH",filter_en_zh:"EN→ZH",filter_zh_ja:"ZH→JA",filter_zh_en:"ZH→EN",
-      more_works:"View All",contact:"Contact",footer_note:"© {year} Lynn"},
-  ja:{nav_home:"ホーム",nav_about:"自己紹介",nav_works:"実績一覧",nav_contact:"お問い合わせ",
-      hero_hi:"こんにちは、Lynnです。\n言葉の奥にある想いを、自然な形で届けます。",
-      hero_sub:"日・英 ➡ 中｜翻訳・ローカライズ・LQA",
-      hero_more:"もっと見る",hero_contact:"お問い合わせ",
-      kpi_years:"経験年数",kpi_games:"携わったゲーム",kpi_books:"翻訳書籍",kpi_allwords:"累計翻訳文字数",
-      advantages:"私の翻訳スタイル",adv1_t:"意訳重視・文脈優先",adv1_d:"逐語訳に頼らず、言葉の魂を伝えます。",
-      adv2_t:"読者とゲーマーの目線で",adv2_d:"体験する人の心に届く訳文を。",
-      adv3_t:"同人出身のプロ翻訳者",adv3_d:"愛から始まり、今は仕事に。情熱と品質を両立。",
-      adv4_t:"ちょっと眠いや",adv4_d:"夜更かししすぎて頭ぐにゃぐにゃ～。ちょっと寝てくるね。",showcase:"作品紹介",
-      filter_all:"すべて",filter_ja_zh:"日→中",filter_en_zh:"英→中",filter_zh_ja:"中→日",filter_zh_en:"中→英",
-      more_works:"実績一覧へ",contact:"連絡先",footer_note:"© {year} Lynn"}
-};
-function pick(){const qp=new URL(location.href).searchParams.get("lang");if(qp)return qp.split("-")[0];
-const s=localStorage.getItem("lang");if(s)return s;const n=(navigator.language||"en").split("-")[0];return["zh","ja","en"].includes(n)?n:"en";}
-function apply(lang){const d=I18N[lang]||I18N.en;document.querySelectorAll("[data-i18n]").forEach(el=>{const k=el.getAttribute("data-i18n");let t=d[k]||k;if(k==="footer_note")t=t.replace("{year}",new Date().getFullYear());el.innerText=t;});
-document.querySelectorAll("[data-lang]").forEach(b=>b.classList.toggle("active",b.getAttribute("data-lang")===lang));localStorage.setItem("lang",lang);}
-document.addEventListener("DOMContentLoaded",()=>{const lang=pick();apply(lang);
-document.querySelectorAll("[data-lang]").forEach(b=>b.addEventListener("click",()=>apply(b.getAttribute("data-lang"))));
-document.querySelectorAll(".filters button").forEach(b=>b.addEventListener("click",()=>{const f=b.getAttribute("data-filter");
-document.querySelectorAll(".filters button").forEach(x=>x.classList.remove("active"));b.classList.add("active");
-document.querySelectorAll(".work").forEach(it=>{const tag=it.getAttribute("data-tag");it.style.display=(f==="all"||f===tag)?"":"none";});}));});
-</script>
+<script src="assets/script.js"></script>
 </body>
 </html>

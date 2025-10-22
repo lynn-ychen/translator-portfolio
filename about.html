@@ -1,38 +1,24 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>About · Lynn</title>
-<meta name="theme-color" content="#ffffff">
-<style>
-/* 简化版样式（与首页一致的风格） */
-:root{--ink:#111827;--muted:#667085;--line:#e5e7eb;--card:#fff;--brand:#2563eb;--max:1040px;--radius:16px;--shadow:0 8px 30px rgba(2,6,23,.06)}
-*{box-sizing:border-box} body{margin:0;font:16px/1.7 ui-sans-serif,system-ui,Segoe UI,Arial;color:var(--ink)}
-a{color:var(--brand);text-decoration:none}
-.nav{position:sticky;top:0;background:#ffffffcc;backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.container{max-width:var(--max);margin:auto;padding:24px}
-.nav-inner{display:flex;align-items:center;justify-content:space-between}
-.links a{color:#667085;padding:10px 12px;border-radius:10px}
-.links a:hover{background:#f5f7fb;color:var(--ink)}
-.section{padding:28px 0}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}
-.pill{display:inline-block;padding:4px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted);font-size:12px;background:#f8fafc}
-.footer{border-top:1px solid var(--line);margin-top:24px;padding:24px 0;color:var(--muted)}
-.avatar{width:80px;height:80px;border-radius:16px;border:1px solid var(--line);background:#f5f7fb;display:inline-flex;align-items:center;justify-content:center;color:#2563eb;font-weight:700}
-</style>
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+
+<!-- 顶部导航 -->
 <div class="nav">
   <div class="container nav-inner">
-    <div><a href="index.html">← Home</a></div>
+    <div class="logo"><span class="dot"></span><span>Lynn</span></div>
     <nav class="links">
       <a href="index.html" data-i18n="nav_home"></a>
       <a href="about.html" data-i18n="nav_about"></a>
       <a href="works.html" data-i18n="nav_works"></a>
-      <a href="#contact" data-i18n="nav_contact"></a>
+      <a href="index.html#contact" data-i18n="nav_contact"></a>
     </nav>
-    <div>
+    <div class="langs">
       <button data-lang="en">EN</button>
       <button data-lang="zh">简体中文</button>
       <button data-lang="ja">日本語</button>
@@ -41,42 +27,93 @@ a{color:var(--brand);text-decoration:none}
 </div>
 
 <div class="container">
-  <section class="section">
-    <h2 data-i18n="about_title"></h2>
-    <div class="grid">
-      <div class="card">
-        <div class="avatar">L</div>
-        <p data-i18n="about_p1"></p>
-        <p class="pill">CN ⇄ JA ⇄ EN · Translation · Localization · LQA</p>
+
+  <!-- 上半：头像 + 头衔/简介 + 右侧自我介绍 -->
+  <section class="section about-top">
+    <h2 class="section-title" data-i18n="about_title"></h2>
+    <div class="about-hero">
+      <!-- 左侧：头像卡片 -->
+      <aside class="about-card">
+        <!-- 可把 src 换成你的头像：assets/avatar.jpg -->
+        <div class="about-avatar" aria-hidden="true">L</div>
+        <h3 class="about-name">Lynn</h3>
+        <p class="about-tagline" data-i18n="about_tagline1"></p>
+        <p class="about-tagline" data-i18n="about_tagline2"></p>
+      </aside>
+
+      <!-- 右侧：自我介绍正文 -->
+      <article class="about-intro">
+        <p data-i18n="about_intro_p1"></p>
+        <p data-i18n="about_intro_p2"></p>
+        <p data-i18n="about_intro_p3"></p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 下半：教育经历 + 工作经历 -->
+  <section class="section about-bottom">
+    <div class="about-grid2">
+      <!-- 教育经历 -->
+      <div>
+        <h3 class="block-title" data-i18n="edu_title"></h3>
+
+        <div class="edu-item">
+          <div class="edu-meta">
+            <div class="edu-period" data-i18n="edu1_period"></div>
+            <div class="edu-school" data-i18n="edu1_school"></div>
+          </div>
+          <div class="edu-degree" data-i18n="edu1_degree"></div>
+        </div>
+
+        <div class="edu-item">
+          <div class="edu-meta">
+            <div class="edu-period" data-i18n="edu2_period"></div>
+            <div class="edu-school" data-i18n="edu2_school"></div>
+          </div>
+          <div class="edu-degree" data-i18n="edu2_degree"></div>
+        </div>
       </div>
-      <div class="card">
-        <h3 data-i18n="edu_title"></h3>
-        <ul><li>XXXX 大学 · 语言学 / 翻译学（YYYY—YYYY）</li></ul>
-        <h3 data-i18n="exp_title"></h3>
-        <ul><li>XXXX 公司 · 本地化（YYYY—至今）</li><li>XXXX 出版社 · 译者（YYYY—YYYY）</li></ul>
+
+      <!-- 工作经历 -->
+      <div>
+        <h3 class="block-title" data-i18n="exp_title"></h3>
+
+        <div class="exp-item">
+          <div class="exp-meta">
+            <div class="exp-period" data-i18n="exp1_period"></div>
+            <div class="exp-org" data-i18n="exp1_org"></div>
+          </div>
+          <div class="exp-desc" data-i18n="exp1_desc"></div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-meta">
+            <div class="exp-period" data-i18n="exp2_period"></div>
+            <div class="exp-org" data-i18n="exp2_org"></div>
+          </div>
+          <div class="exp-desc" data-i18n="exp2_desc"></div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-meta">
+            <div class="exp-period" data-i18n="exp3_period"></div>
+            <div class="exp-org" data-i18n="exp3_org"></div>
+          </div>
+          <div class="exp-desc" data-i18n="exp3_desc"></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <footer id="contact" class="footer">
-    <h3 data-i18n="contact"></h3>
-    <p><b data-i18n="email"></b>：<a href="mailto:lynn.ychen@outlook.com">lynn.ychen@outlook.com</a></p>
+  <!-- 页脚 -->
+  <footer id="contact" class="works-footer">
+      <h3 data-i18n="contact"></h3>
+     <p><b data-i18n="email"></b>：<a href="mailto:lynn.ychen@outlook.com">lynn.ychen@outlook.com</a></p>
+   </div>
   </footer>
 </div>
 
-<script>
-const I18N={en:{nav_home:"Home",nav_about:"About",nav_works:"Works",nav_contact:"Contact",
-about_title:"About Me",about_p1:"Hi, I'm Lynn — translator & game localization specialist. I help games and content feel native across CN/JA/EN.",
-edu_title:"Education",exp_title:"Experience",contact:"Contact",email:"Email"},
-zh:{nav_home:"首页",nav_about:"自我介绍",nav_works:"作品一览",nav_contact:"联系",
-about_title:"自我介绍",about_p1:"你好，我是 Lynn，翻译 / 游戏本地化从业者，擅长在中/日/英之间做自然、可落地的本地化。",
-edu_title:"学历",exp_title:"职历",contact:"联系方式",email:"电子邮箱"},
-ja:{nav_home:"ホーム",nav_about:"自己紹介",nav_works:"実績一覧",nav_contact:"連絡先",
-about_title:"自己紹介",about_p1:"こんにちは、Lynnです。中・日・英の翻訳／ゲームローカライズを担当しています。",
-edu_title:"学歴",exp_title:"職歴",contact:"連絡先",email:"メール"}};
-function pickLang(){const qp=new URL(location.href).searchParams.get("lang");if(qp)return qp.split("-")[0];const s=localStorage.getItem("lang");if(s)return s;const n=(navigator.language||"en").split("-")[0];return ["zh","ja","en"].includes(n)?n:"en";}
-function apply(lang){const d=I18N[lang]||I18N.en;document.querySelectorAll("[data-i18n]").forEach(el=>{const k=el.getAttribute("data-i18n");el.innerText=(d[k]||k);});localStorage.setItem("lang",lang);}
-document.addEventListener("DOMContentLoaded",()=>{apply(pickLang());document.querySelectorAll("[data-lang]").forEach(b=>b.addEventListener("click",()=>apply(b.getAttribute("data-lang"))));});
-</script>
+
+<script src="assets/script.js"></script>
 </body>
 </html>
