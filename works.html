@@ -27,19 +27,27 @@
 </div>
 
 <div class="container">
-  <section class="section">
-    <h2 data-i18n="works_title"></h2>
-    <div class="filters">
-      <button class="active" data-filter="all" data-i18n="filter_all"></button>
-      <button data-filter="ja-zh" data-i18n="filter_ja_zh"></button>
-      <button data-filter="en-zh" data-i18n="filter_en_zh"></button>
-      <button data-filter="zh-ja" data-i18n="filter_zh_ja"></button>
-      <button data-filter="zh-en" data-i18n="filter_zh_en"></button>
+  <section class="section works-section">
+    <!-- 简化标题区域 -->
+    <div class="works-header">
+      <h2 data-i18n="works_title"></h2>
+      <p class="works-subtitle"></p>
     </div>
 
-    <div class="works-grid">
+    <!-- 简化筛选器 -->
+    <div class="works-filters">
+      <button class="filter-btn active" data-filter="all" data-i18n="filter_all"></button>
+      <button class="filter-btn" data-filter="ja-zh" data-i18n="filter_ja_zh"></button>
+      <button class="filter-btn" data-filter="en-zh" data-i18n="filter_en_zh"></button>
+      <button class="filter-btn" data-filter="zh-ja" data-i18n="filter_zh_ja"></button>
+      <button class="filter-btn" data-filter="zh-en" data-i18n="filter_zh_en"></button>
+    </div>
+
+    <div class="works-grid" id="worksGrid">
+      <!-- 英翻中游戏 (7-10) -->
+      <!-- 初始显示6张卡片 -->
       <article id="item1" class="work-card" data-tag="ja-zh">
-        <div class="work-thumb">Project Image</div>
+        <div class="work-thumb">FLOWERS 四季</div>
         <h3 data-i18n="work1_title"></h3>
         <p data-i18n="work1_desc"></p>
         <div class="work-role">
@@ -47,17 +55,17 @@
         </div>
       </article>
 
-      <article id="item2" class="work-card" data-tag="en-zh">
-        <div class="work-thumb">Project Image</div>
+      <article id="item2" class="work-card" data-tag="ja-zh">
+        <div class="work-thumb">幻兽帕鲁</div>
         <h3 data-i18n="work2_title"></h3>
         <p data-i18n="work2_desc"></p>
         <div class="work-role">
           <b data-i18n="works_role"></b>：<span data-i18n="work2_role"></span>
         </div>
       </article>
-	  
-	  <article id="item3" class="work-card" data-tag="ja-zh">
-        <div class="work-thumb">Project Image</div>
+
+      <article id="item3" class="work-card" data-tag="ja-zh">
+        <div class="work-thumb">项目图片</div>
         <h3 data-i18n="work3_title"></h3>
         <p data-i18n="work3_desc"></p>
         <div class="work-role">
@@ -65,22 +73,193 @@
         </div>
       </article>
 
-      <article id="item4" class="work-card" data-tag="en-zh">
-        <div class="work-thumb">Project Image</div>
+      <article id="item4" class="work-card" data-tag="ja-zh">
+        <div class="work-thumb">项目图片</div>
         <h3 data-i18n="work4_title"></h3>
         <p data-i18n="work4_desc"></p>
         <div class="work-role">
           <b data-i18n="works_role"></b>：<span data-i18n="work4_role"></span>
         </div>
       </article>
+
+      <article id="item5" class="work-card" data-tag="ja-zh">
+        <div class="work-thumb">项目图片</div>
+        <h3 data-i18n="work5_title"></h3>
+        <p data-i18n="work5_desc"></p>
+        <div class="work-role">
+          <b data-i18n="works_role"></b>：<span data-i18n="work5_role"></span>
+        </div>
+      </article>
+
+      <article id="item6" class="work-card" data-tag="ja-zh">
+        <div class="work-thumb">项目图片</div>
+        <h3 data-i18n="work6_title"></h3>
+        <p data-i18n="work6_desc"></p>
+        <div class="work-role">
+          <b data-i18n="works_role"></b>：<span data-i18n="work6_role"></span>
+        </div>
+      </article>
+
+      <!-- 隐藏的卡片，将通过JavaScript动态加载 -->
+      <!-- 英翻中游戏 (7-10) -->
+      <article id="item7" class="work-card hidden" data-tag="en-zh">
+        <div class="work-thumb">晨曦族人</div>
+        <h3 data-i18n="work7_title"></h3>
+        <p data-i18n="work7_desc"></p>
+        <div class="work-role">
+          <b data-i18n="works_role"></b>：<span data-i18n="work7_role"></span>
+        </div>
+      </article>
+
+      <article id="item8" class="work-card hidden" data-tag="en-zh">
+        <div class="work-thumb">花开公路</div>
+        <h3 data-i18n="work8_title"></h3>
+        <p data-i18n="work8_desc"></p>
+        <div class="work-role">
+          <b data-i18n="works_role"></b>：<span data-i18n="work8_role"></span>
+        </div>
+      </article>
+
+      <article id="item9" class="work-card hidden" data-tag="en-zh">
+        <div class="work-thumb">项目图片</div>
+        <h3 data-i18n="work9_title"></h3>
+        <p data-i18n="work9_desc"></p>
+        <div class="work-role">
+          <b data-i18n="works_role"></b>：<span data-i18n="work9_role"></span>
+        </div>
+      </article>
+
+      <article id="item10" class="work-card hidden" data-tag="en-zh">
+        <div class="work-thumb">项目图片</div>
+        <h3 data-i18n="work10_title"></h3>
+        <p data-i18n="work10_desc"></p>
+        <div class="work-role">
+          <b data-i18n="works_role"></b>：<span data-i18n="work10_role"></span>
+        </div>
+      </article>
+
+      <!-- 中翻英游戏 (11-13) -->
+      <article id="item11" class="work-card hidden" data-tag="zh-en">
+        <div class="work-thumb">面包审判</div>
+        <h3 data-i18n="work11_title"></h3>
+        <p data-i18n="work11_desc"></p>
+        <div class="work-role">
+          <b data-i18n="works_role"></b>：<span data-i18n="work11_role"></span>
+        </div>
+      </article>
+
+      <article id="item12" class="work-card hidden" data-tag="zh-en">
+        <div class="work-thumb">项目图片</div>
+        <h3 data-i18n="work12_title"></h3>
+        <p data-i18n="work12_desc"></p>
+        <div class="work-role">
+          <b data-i18n="works_role"></b>：<span data-i18n="work12_role"></span>
+        </div>
+      </article>
+
+      <article id="item13" class="work-card hidden" data-tag="zh-en">
+        <div class="work-thumb">项目图片</div>
+        <h3 data-i18n="work13_title"></h3>
+        <p data-i18n="work13_desc"></p>
+        <div class="work-role">
+          <b data-i18n="works_role"></b>：<span data-i18n="work13_role"></span>
+        </div>
+      </article>
+
+      <!-- 中翻日游戏 (14-15) -->
+      <article id="item14" class="work-card hidden" data-tag="zh-ja">
+        <div class="work-thumb">无名者：屠龙</div>
+        <h3 data-i18n="work14_title"></h3>
+        <p data-i18n="work14_desc"></p>
+        <div class="work-role">
+          <b data-i18n="works_role"></b>：<span data-i18n="work14_role"></span>
+        </div>
+      </article>
+
+      <article id="item15" class="work-card hidden" data-tag="zh-ja">
+        <div class="work-thumb">项目图片</div>
+        <h3 data-i18n="work15_title"></h3>
+        <p data-i18n="work15_desc"></p>
+        <div class="work-role">
+          <b data-i18n="works_role"></b>：<span data-i18n="work15_role"></span>
+        </div>
+      </article>
+
+      <!-- 英翻中书籍 (16-19) -->
+      <article id="item16" class="work-card hidden" data-tag="en-zh">
+        <div class="work-thumb">无依之地</div>
+        <h3 data-i18n="work16_title"></h3>
+        <p data-i18n="work16_desc"></p>
+        <div class="work-role">
+          <b data-i18n="works_role"></b>：<span data-i18n="work16_role"></span>
+        </div>
+      </article>
+
+      <article id="item17" class="work-card hidden" data-tag="en-zh">
+        <div class="work-thumb">时间的女儿</div>
+        <h3 data-i18n="work17_title"></h3>
+        <p data-i18n="work17_desc"></p>
+        <div class="work-role">
+          <b data-i18n="works_role"></b>：<span data-i18n="work17_role"></span>
+        </div>
+      </article>
+
+      <article id="item18" class="work-card hidden" data-tag="en-zh">
+        <div class="work-thumb">无法别离</div>
+        <h3 data-i18n="work18_title"></h3>
+        <p data-i18n="work18_desc"></p>
+        <div class="work-role">
+          <b data-i18n="works_role"></b>：<span data-i18n="work18_role"></span>
+        </div>
+      </article>
+
+      <article id="item19" class="work-card hidden" data-tag="en-zh">
+        <div class="work-thumb">项目图片</div>
+        <h3 data-i18n="work19_title"></h3>
+        <p data-i18n="work19_desc"></p>
+        <div class="work-role">
+          <b data-i18n="works_role"></b>：<span data-i18n="work19_role"></span>
+        </div>
+      </article>
+
+      <!-- 日翻中书籍 (20-21) -->
+      <article id="item20" class="work-card hidden" data-tag="ja-zh">
+        <div class="work-thumb">半七捕物帐</div>
+        <h3 data-i18n="work20_title"></h3>
+        <p data-i18n="work20_desc"></p>
+        <div class="work-role">
+          <b data-i18n="works_role"></b>：<span data-i18n="work20_role"></span>
+        </div>
+      </article>
+
+      <article id="item21" class="work-card hidden" data-tag="ja-zh">
+        <div class="work-thumb">爱书的下克上</div>
+        <h3 data-i18n="work21_title"></h3>
+        <p data-i18n="work21_desc"></p>
+        <div class="work-role">
+          <b data-i18n="works_role"></b>：<span data-i18n="work21_role"></span>
+        </div>
+      </article>
+    </div>
+
+    <!-- 极简加载更多 -->
+    <div class="load-more-container" id="loadMoreContainer">
+      <button class="load-more-btn" id="loadMoreBtn">
+        <span class="load-more-text" data-i18n="load_more">Load More</span>
+        <span class="load-more-arrow">↓</span>
+      </button>
     </div>
   </section>
 
+   <!-- 简化页脚 -->
   <footer id="contact" class="works-footer">
     <h3 data-i18n="contact"></h3>
-    <p><b data-i18n="email"></b>：<a href="mailto:lynn.ychen@outlook.com">lynn.ychen@outlook.com</a></p>
+    <p><a href="mailto:lynn.ychen@outlook.com">lynn.ychen@outlook.com</a></p>
   </footer>
-  </div>
+</div>
+
+<!-- 简约返回顶部 -->
+<button class="back-to-top" id="backToTop" title="Back to Top">↑</button>
 
 <script src="assets/script.js"></script>
 </body>

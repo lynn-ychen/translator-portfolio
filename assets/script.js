@@ -69,7 +69,7 @@ const I18N = {
       about_tagline1: "翻译 · 游戏本地化 · LQA",
       about_tagline2: "中 日 · 英",
       about_intro_p1: "你好，我是 Lynn！",
-      about_intro_p2: "一位专注于“说人话”的译员。",
+      about_intro_p2: "一位专注于\"说人话\"的译员。",
       about_intro_p3: "欢迎来到我的小展示厅，请随意参观！网站还在建设当中，我会努力再多写点关于自己的内容的。",
     edu_title: "教育背景",
       edu1_period: "2012 - 2013",
@@ -88,11 +88,11 @@ const I18N = {
       "作品体裁包括游戏、书籍、媒体文章、论文等多种类型",
 
       exp2_period: "2015 - 2021",
-      exp2_org: "“圣彗星兰汉化组” - 核心成员",
+      exp2_org: "「圣彗星兰汉化组」- 核心成员",
       exp2_desc:
       "因兴趣开始录制百合游戏《FLOWERS》的实况视频并自行翻译、制作字幕，获得2000+粉丝\n" +
-      "与同伴组建“圣彗星兰学院汉化组”，翻译并制作《FLOWERS》汉化补丁，后因质量上乘、口碑优良而被官方选为官方汉化\n" +
-      "亦作为“白衣汉化组”成员参与多个游戏补丁的汉化工作",
+      "与同伴组建「圣彗星兰学院汉化组」，翻译并制作《FLOWERS》汉化补丁，后因质量上乘、口碑优良而被官方选为官方汉化\n" +
+      "亦作为「白衣汉化组」成员参与多个游戏补丁的汉化工作",
 
       exp3_period: "2013 - 2015",
       exp3_org: "杭州南森诚道信息咨询有限公司 - 高级顾问",
@@ -105,6 +105,7 @@ const I18N = {
     // Works 页面
     works_title: "作品一览",
     works_role: "负责内容",
+    load_more: "查看更多作品",
     // 作品项描述
     work1_title: "FlOWERS 四季",
     work1_desc: "JA→ZHCN · 开发商：Innocent Grey · 发行商：JAST",
@@ -119,14 +120,14 @@ const I18N = {
     work3_role: "翻译",
 
     work4_title: "花开公路", 
-    work4_desc: "EN→ZHCN · 开发商：Studio Élan· 发行商：Studio Élan",
+    work4_desc: "EN→ZHCN · 开发商：Studio Élan · 发行商：Studio Élan",
     work4_role: "审校"
     
   },
   en: {
     nav_home: "Home",
     nav_about: "About Me", 
-    nav_works: "Portfoliio",
+    nav_works: "Portfolio",
     nav_contact: "Contact",
     hero_hi: "Hi, I'm Lynn! \na translator who makes words sound just right.",
     hero_sub: "JA / EN ➡ ZHCN ｜ Translation · Localization · LQA", 
@@ -185,7 +186,7 @@ const I18N = {
       exp1_org: "Freelance Translator",
       exp1_desc: "Providing professional translation services in Chinese, Japanese, and English, with a cumulative translation volume exceeding 3 million words\n"+"Specialized in diverse fields including video games, books, media articles, and academic papers",
       exp2_period: "2015 - 2021",
-      exp2_org: "St. Angraecum Acadamy Fan Translation Group",
+      exp2_org: "St. Angraecum Academy Fan Translation Group",
       exp2_desc: "Started by creating and translating Let's Play videos for the yuri game FLOWERS, attracting 2,000+ followers\n"+"Co-founded a dedicated team for the FLOWERS series; the high-quality Chinese localization patch developed by the team gained significant community acclaim and was later officially adopted by the developer for its exceptional quality and reception\n"+"Also participated in several officially licensed localization projects as a member of the \"Hakui\" translation group",
       exp3_period: "2013 - 2015",
       exp3_org: "Hangzhou Nansen Information Consulting Co., Ltd.",
@@ -196,6 +197,7 @@ const I18N = {
     // Works 页面
     works_title: "Portfolio",
     works_role: "Role",
+    load_more: "View More",
     // 作品项描述
     work1_title: "FlOWERS Les Quatre Saisons (Shiki)",
     work1_desc: "JA→ZHCN \nDeveloper: Innocent Grey \nPublisher: JAST",
@@ -286,6 +288,7 @@ const I18N = {
     // Works 页面
     works_title: "実績一覧",
     works_role: "担当内容",
+    load_more: "もっと見る",
     // 作品项描述
     work1_title: "FlOWERS 四季",
     work1_desc: "日→中 \n開発元：Innocent Grey \n発売元：JAST",
@@ -331,19 +334,12 @@ function applyLanguage(lang) {
       text = text.replace("{year}", new Date().getFullYear());
     }
     
-    // === 20251022修改：添加教育学位支持 ===
+    // 对于工作经历描述和教育学位，使用 textContent 保留 \n
     if ((key.includes('exp') && key.includes('desc')) || 
         (key.includes('edu') && key.includes('degree'))) {
       el.textContent = text;
     } else {
       el.innerText = text;
-    }
-
-    // === 20251022修改：对于工作经历描述，使用 textContent 保留 \n ===
-    if (key.includes('exp') && key.includes('desc')) {
-      el.textContent = text; // 使用 textContent 保留换行符
-    } else {
-      el.innerText = text; // 其他元素继续使用 innerText
     }
   });
   
@@ -371,9 +367,9 @@ function applyLanguage(lang) {
   }, 100);
 }
 
-// 通用筛选函数
-function initFilters() {
-  const filterButtons = document.querySelectorAll(".filters button");
+// Works页面专用筛选函数 - 筛选时自动显示匹配的隐藏卡片
+function initWorksFilters() {
+  const filterButtons = document.querySelectorAll(".filter-btn");
   
   filterButtons.forEach(btn => {
     btn.addEventListener("click", () => {
@@ -383,25 +379,60 @@ function initFilters() {
       filterButtons.forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
       
-      // 筛选首页的 .work 元素（小卡片）
-      const indexWorks = document.querySelectorAll(".work");
-      if (indexWorks.length > 0) {
-        indexWorks.forEach(item => {
-          const tag = item.getAttribute("data-tag");
-          item.style.display = (filter === "all" || filter === tag) ? "" : "none";
-        });
-      }
+      // 筛选作品卡片
+      const workCards = document.querySelectorAll(".work-card");
+      let visibleCount = 0;
       
-      // 筛选 works 页面的 .work-card 元素（大卡片）
-      const worksCards = document.querySelectorAll(".work-card");
-      if (worksCards.length > 0) {
-        worksCards.forEach(item => {
-          const tag = item.getAttribute("data-tag");
-          item.style.display = (filter === "all" || filter === tag) ? "" : "none";
-        });
-      }
+      workCards.forEach((item) => {
+        const tag = item.getAttribute("data-tag");
+        
+        if (filter === "all" || filter === tag) {
+          // 无论是否隐藏，只要匹配筛选条件就显示
+          item.classList.remove("hidden");
+          item.style.display = ""; // 确保显示
+          visibleCount++;
+        } else {
+          // 不匹配的卡片隐藏
+          item.classList.add("hidden");
+          item.style.display = "none";
+        }
+      });
+      
+      console.log(`筛选 "${filter}"，显示 ${visibleCount} 张卡片`);
+      
+      // 更新加载更多按钮状态
+      updateLoadMoreVisibilityAfterFilter(filter);
     });
   });
+}
+
+// 筛选后的加载更多可见性检查
+function updateLoadMoreVisibilityAfterFilter(currentFilter) {
+  const worksGrid = document.getElementById('worksGrid');
+  const loadMoreBtn = document.getElementById('loadMoreBtn');
+  const loadMoreContainer = document.getElementById('loadMoreContainer');
+  
+  if (!worksGrid || !loadMoreBtn || !loadMoreContainer) return;
+  
+  const allCards = worksGrid.querySelectorAll('.work-card');
+  const visibleCards = worksGrid.querySelectorAll('.work-card:not(.hidden)');
+  const totalHiddenByLoadMore = Array.from(allCards).filter(card => 
+    card.classList.contains('hidden') && 
+    (currentFilter === 'all' || card.getAttribute('data-tag') === currentFilter)
+  ).length;
+  
+  console.log(`总卡片: ${allCards.length}, 可见: ${visibleCards.length}, 可加载: ${totalHiddenByLoadMore}`);
+  
+  // 如果有可加载的隐藏卡片（匹配当前筛选条件）且当前有可见卡片，显示加载更多
+  if (totalHiddenByLoadMore > 0 && visibleCards.length > 0) {
+    loadMoreBtn.style.display = 'inline-flex';
+    loadMoreContainer.style.display = 'flex';
+    console.log('显示加载更多按钮');
+  } else {
+    loadMoreBtn.style.display = 'none';
+    loadMoreContainer.style.display = 'none';
+    console.log('隐藏加载更多按钮');
+  }
 }
 
 // showcase 点击事件
@@ -426,16 +457,16 @@ function initShowcase() {
   });
 }
 
-// 添加自动滚动函数 
+// Showcase自动滚动函数 - 双排版本
 function initAutoScroll() {
   const showcaseContainer = document.querySelector('.showcase-container');
-  const showcaseItems = document.querySelectorAll('.showcase-item');
+  const showcaseRows = document.querySelectorAll('.showcase-row');
   
-  if (!showcaseContainer || showcaseItems.length === 0) return;
+  if (!showcaseContainer || showcaseRows.length === 0) return;
   
-  // 复制 showcase 项目以实现无缝循环
-  showcaseItems.forEach(item => {
-    const clone = item.cloneNode(true);
+  // 为双排布局：复制每一行的内容以实现无缝循环
+  showcaseRows.forEach(row => {
+    const clone = row.cloneNode(true);
     showcaseContainer.appendChild(clone);
   });
   
@@ -452,7 +483,7 @@ function initAutoScroll() {
   });
 }
 
-// === 20251022新增：教育经历格式化功能 ===
+// Education格式化功能
 function enhanceEduDegree() {
   console.log('enhanceEduDegree called');
   
@@ -464,14 +495,13 @@ function enhanceEduDegree() {
     if (!raw.trim()) return;
     
     // 确保应用箭头样式
-    if (!node.style.paddingLeft) {
-        node.classList.add('has-arrow');
-      //node.style.paddingLeft = '1.8em';
+    if (!node.classList.contains('has-arrow')) {
+      node.classList.add('has-arrow');
     }
   });
 }
 
-// 工作经历描述格式化功能
+// Experience描述格式化功能
 function enhanceExpDesc() {
   console.log('enhanceExpDesc called');
   
@@ -486,7 +516,7 @@ function enhanceExpDesc() {
     // 如果没有内容，直接返回
     if (parts.length === 0) return;
     
-    // === 关键修复：总是先完全清空内容 ===
+    // 关键修复：总是先完全清空内容
     node.innerHTML = '';
     
     // 逐段创建 <p class="bp">
@@ -501,10 +531,184 @@ function enhanceExpDesc() {
   });
 }
 
+// Works 页面功能
+function initWorksPage() {
+  const worksGrid = document.getElementById('worksGrid');
+  const loadMoreBtn = document.getElementById('loadMoreBtn');
+  const backToTopBtn = document.getElementById('backToTop');
+  
+  if (!worksGrid || !loadMoreBtn) return;
+  
+  let itemsPerLoad = 6;
+  let currentVisibleCount = 6;
+  let isLoading = false;
+
+  // 加载更多功能 - 只加载当前筛选条件下的隐藏卡片
+  function loadMoreItems() {
+    if (isLoading) return;
+    
+    isLoading = true;
+    
+    // 添加加载状态
+    loadMoreBtn.disabled = true;
+    loadMoreBtn.innerHTML = '<span class="loading-text">加载中...</span>';
+    
+    // 获取当前活跃的筛选条件
+    const activeFilter = document.querySelector('.filter-btn.active')?.getAttribute('data-filter') || 'all';
+    
+    // 只加载匹配当前筛选条件的隐藏卡片
+    const allHiddenItems = worksGrid.querySelectorAll('.work-card.hidden');
+    const matchingHiddenItems = Array.from(allHiddenItems).filter(item => {
+      const tag = item.getAttribute('data-tag');
+      return activeFilter === 'all' || tag === activeFilter;
+    });
+    
+    const itemsToShow = matchingHiddenItems.slice(0, itemsPerLoad);
+    
+    console.log(`加载更多: 筛选条件 "${activeFilter}", 可加载 ${matchingHiddenItems.length} 张, 本次显示 ${itemsToShow.length} 张`);
+    
+    setTimeout(() => {
+      itemsToShow.forEach(item => {
+        item.classList.remove('hidden');
+        item.style.display = "";
+        item.style.opacity = '0';
+        item.style.transform = 'translateY(20px)';
+        
+        setTimeout(() => {
+          item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+          item.style.opacity = '1';
+          item.style.transform = 'translateY(0)';
+        }, 50);
+      });
+      
+      currentVisibleCount += itemsToShow.length;
+      
+      // 恢复按钮状态
+      loadMoreBtn.disabled = false;
+      loadMoreBtn.innerHTML = `
+        <span class="load-more-text" data-i18n="load_more">Load More</span>
+        <span class="load-more-arrow">↓</span>
+      `;
+      
+      // 更新多语言
+      applyLanguage(pickLanguage());
+      
+      // 检查是否还有更多可加载的卡片
+      updateLoadMoreVisibilityAfterFilter(activeFilter);
+      
+      isLoading = false;
+    }, 500);
+  }
+  
+  // 返回顶部功能
+  function initBackToTop() {
+    if (!backToTopBtn) return;
+    
+    function toggleBackToTop() {
+      if (window.pageYOffset > 300) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    }
+    
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+    
+    window.addEventListener('scroll', toggleBackToTop);
+    backToTopBtn.addEventListener('click', scrollToTop);
+  }
+  
+  // 自动加载
+  function initAutoLoadOnScroll() {
+    let autoLoadTriggered = false;
+    
+    function checkScroll() {
+      if (isLoading || autoLoadTriggered) return;
+      
+      const loadMoreContainer = document.getElementById('loadMoreContainer');
+      if (!loadMoreContainer) return;
+      
+      const containerRect = loadMoreContainer.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      const triggerPoint = windowHeight * 0.66;
+      
+      if (containerRect.top <= triggerPoint) {
+        autoLoadTriggered = true;
+        loadMoreItems();
+        
+        setTimeout(() => {
+          autoLoadTriggered = false;
+        }, 2000);
+      }
+    }
+    
+    let scrollTimeout;
+    function debouncedCheckScroll() {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(checkScroll, 100);
+    }
+    
+    window.addEventListener('scroll', debouncedCheckScroll);
+  }
+  
+  // 绑定事件
+  loadMoreBtn.addEventListener('click', function() {
+    this.style.transform = 'scale(0.95)';
+    setTimeout(() => {
+      this.style.transform = 'scale(1)';
+      loadMoreItems();
+    }, 150);
+  });
+  
+  initBackToTop();
+  initAutoLoadOnScroll();
+  
+  // 初始隐藏超出数量的卡片
+  const allCards = worksGrid.querySelectorAll('.work-card');
+  allCards.forEach((card, index) => {
+    if (index >= currentVisibleCount) {
+      card.classList.add('hidden');
+    }
+  });
+  
+  // 初始化筛选器
+  initWorksFilters();
+}
+
+// 通用筛选函数（用于其他页面）
+function initFilters() {
+  const filterButtons = document.querySelectorAll(".filters button");
+  
+  filterButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const filter = btn.getAttribute("data-filter");
+      
+      // 更新按钮状态
+      filterButtons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      
+      // 筛选首页的 .work 元素（小卡片）
+      const indexWorks = document.querySelectorAll(".work");
+      if (indexWorks.length > 0) {
+        indexWorks.forEach(item => {
+          const tag = item.getAttribute("data-tag");
+          item.style.display = (filter === "all" || filter === tag) ? "" : "none";
+        });
+      }
+    });
+  });
+}
+
 // 初始化
 function initI18N() {
   const currentLang = pickLanguage();
   applyLanguage(currentLang);
+  
   // 语言切换事件
   document.querySelectorAll("[data-lang]").forEach(btn => {
     btn.addEventListener("click", () => {
@@ -521,6 +725,11 @@ function initI18N() {
   
   // 初始化自动滚动
   initAutoScroll();
+  
+  // 初始化 Works 页面功能
+  if (window.location.pathname.includes('works.html')) {
+    initWorksPage();
+  }
 }
 
 // DOM 加载完成后初始化
