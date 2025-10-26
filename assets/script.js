@@ -47,6 +47,8 @@ const I18N = {
     showcase5_desc: "中翻英 · 游戏本地化",
     showcase6_title: "无名者：屠龙",
     showcase6_desc: "中翻日 · 游戏本地化",
+    showcase7_title: "永恒终焉",
+    showcase7_desc: "日翻中 · 游戏本地化",
     showcase51_title: "无依之地",
     showcase51_desc: "英翻中 · 译著书籍",
     showcase52_title: "时间的女儿",
@@ -249,6 +251,8 @@ const I18N = {
     showcase5_desc: "ZHCN→EN · Game Localization",
     showcase6_title: "The Nameless: Slay Dragon",
     showcase6_desc: "ZHCN→EN · Game Localization",
+    showcase7_title: "Resonance of Fate 4K/HD Edition",
+    showcase7_desc: "JA→ZHCN · Game Localization",
     showcase51_title: "Nomadland: Surviving America in the Twenty-First Century",
     showcase51_desc: "EN→ZHCN · Book Translation",
     showcase52_title: "The Daughter of Time",
@@ -441,6 +445,8 @@ const I18N = {
     showcase5_desc: "中→英 · ゲームローカライゼーション",
     showcase6_title: "無名者：屠竜",
     showcase6_desc: "中→日 · ゲームローカライゼーション",
+    showcase7_title: "エンド オブ エタニティ",
+    showcase7_desc: "日→中 · ゲームローカライゼーション",
     showcase51_title: "ノマド: 漂流する高齢労働者たち",
     showcase51_desc: "英→中 · 翻訳作品（本）",
     showcase52_title: "時の娘",
@@ -837,6 +843,7 @@ function enhanceExpDesc() {
 }
 
 // Works 页面功能
+// Works 页面功能 - 修正版本
 function initWorksPage() {
   const worksGrid = document.getElementById('worksGrid');
   const loadMoreBtn = document.getElementById('loadMoreBtn');
@@ -847,39 +854,86 @@ function initWorksPage() {
   let itemsPerLoad = 6;
   let currentVisibleCount = 6;
   let isLoading = false;
-
-  // 新增：检查URL中的锚点并滚动到对应作品
+  let hasProcessedAnchor = false;
+  let anchorTargetId = null; // 新增：记录锚点目标ID
+  
   function scrollToTargetItem() {
+    // 如果已经处理过锚点，不再重复处理
+    if (hasProcessedAnchor) return;
+    
     const hash = window.location.hash;
-    if (hash) {
-      const targetId = hash.substring(1); // 去掉#号
+    console.log('检测到URL哈希:', hash);
+    
+    if (hash && hash.startsWith('#item')) {
+      const targetId = hash.substring(1);
+      console.log('寻找目标元素:', targetId);
+      
       const targetElement = document.getElementById(targetId);
+      
       if (targetElement) {
-        // 如果目标元素是隐藏的，先显示它
-        if (targetElement.classList.contains('hidden')) {
-          targetElement.classList.remove('hidden');
-          targetElement.style.display = "";
-        }
+        console.log('找到目标元素，准备智能显示和滚动');
         
-        // 延迟滚动以确保元素已显示
-        setTimeout(() => {
-          targetElement.scrollIntoView({ 
-            behavior: 'smooth',
-            block: 'center'
-          });
+        // 标记已开始处理锚点并记录目标ID
+        hasProcessedAnchor = true;
+        anchorTargetId = targetId;
+        
+        // 计算目标卡片在所有卡片中的索引
+        const allCards = Array.from(worksGrid.querySelectorAll('.work-card'));
+        const targetIndex = allCards.findIndex(card => card.id === targetId);
+        console.log('目标卡片索引:', targetIndex);
+        
+        if (targetIndex !== -1) {
+          // 显示从开始到目标卡片的所有卡片（包括目标卡片）
+          for (let i = 0; i <= targetIndex; i++) {
+            const card = allCards[i];
+            if (card.classList.contains('hidden')) {
+              card.classList.remove('hidden');
+              card.style.display = "";
+              // 添加淡入动画
+              card.style.opacity = '0';
+              card.style.transform = 'translateY(20px)';
+              setTimeout(() => {
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+              }, 50 * i);
+            }
+          }
           
-          // 添加高亮效果
-          targetElement.style.transition = 'all 0.5s ease';
-          targetElement.style.boxShadow = '0 0 0 3px var(--brand)';
+          // 更新当前可见数量
+          currentVisibleCount = Math.max(currentVisibleCount, targetIndex + 1);
+          console.log('更新后可见数量:', currentVisibleCount);
+          
+          // 延迟滚动以确保所有卡片已显示
           setTimeout(() => {
-            targetElement.style.boxShadow = '';
-          }, 2000);
-        }, 500);
+            console.log('执行滚动到目标元素');
+            targetElement.scrollIntoView({ 
+              behavior: 'smooth',
+              block: 'center'
+            });
+            
+            // 添加高亮效果
+            targetElement.style.transition = 'all 0.5s ease';
+            targetElement.style.boxShadow = '0 0 0 3px var(--brand)';
+            setTimeout(() => {
+              targetElement.style.boxShadow = '';
+              // 高亮结束后，清除锚点目标ID，允许正常滚动
+              anchorTargetId = null;
+              console.log('锚点高亮完成，允许正常滚动');
+            }, 2000);
+            
+            // 更新加载更多按钮状态
+            updateLoadMoreVisibilityAfterFilter('all');
+            
+          }, 800);
+        }
+      } else {
+        console.log('未找到目标元素:', targetId);
       }
     }
   }
 
-  // 加载更多功能 - 只加载当前筛选条件下的隐藏卡片
+  // 加载更多功能 - 修正版本：避免锚点干扰
   function loadMoreItems() {
     if (isLoading) return;
     
@@ -934,8 +988,9 @@ function initWorksPage() {
       
       isLoading = false;
 
-      // 新增：加载更多后重新检查是否需要滚动到锚点
-      scrollToTargetItem();
+      // 重要修改：加载更多后不再重新检查锚点滚动
+      // 只有在初次加载时才处理锚点
+      console.log('加载更多完成，不重新触发锚点滚动');
     }, 500);
   }
   
@@ -962,12 +1017,16 @@ function initWorksPage() {
     backToTopBtn.addEventListener('click', scrollToTop);
   }
   
-  // 自动加载
+  // 自动加载 - 修正版本：避免锚点干扰
   function initAutoLoadOnScroll() {
     let autoLoadTriggered = false;
     
     function checkScroll() {
-      if (isLoading || autoLoadTriggered) return;
+      // 重要修改：如果当前有活跃的锚点目标，暂停自动加载
+      if (isLoading || autoLoadTriggered || anchorTargetId) {
+        console.log('暂停自动加载：锚点目标活跃中');
+        return;
+      }
       
       const loadMoreContainer = document.getElementById('loadMoreContainer');
       if (!loadMoreContainer) return;
@@ -1018,10 +1077,33 @@ function initWorksPage() {
   // 初始化筛选器
   initWorksFilters();
 
-  // 新增：页面加载完成后检查锚点
+  // 新增：清除URL哈希的函数
+  function clearUrlHash() {
+    if (window.location.hash) {
+      // 使用history.replaceState移除哈希，但不刷新页面
+      history.replaceState(null, null, window.location.pathname + window.location.search);
+      console.log('已清除URL哈希');
+    }
+  }
+
+  // 监听滚动事件，当用户主动滚动时清除锚点状态
+  let userScrolled = false;
+  window.addEventListener('scroll', () => {
+    if (!userScrolled && hasProcessedAnchor) {
+      userScrolled = true;
+      // 用户开始主动滚动，清除锚点目标ID允许正常自动加载
+      anchorTargetId = null;
+      console.log('用户主动滚动，允许正常自动加载');
+      
+      // 可选：清除URL哈希
+      setTimeout(clearUrlHash, 1000);
+    }
+  });
+
+  // 页面加载完成后检查锚点
   window.addEventListener('load', scrollToTargetItem);
   
-  // 新增：如果通过hashchange（比如从首页点击过来），也执行滚动
+  // 如果通过hashchange（比如从首页点击过来），也执行滚动
   window.addEventListener('hashchange', scrollToTargetItem);
 }
 
@@ -1078,5 +1160,4 @@ function initI18N() {
 }
 
 // DOM 加载完成后初始化
-
 document.addEventListener("DOMContentLoaded", initI18N);
