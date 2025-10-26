@@ -47,27 +47,25 @@ const I18N = {
     showcase5_desc: "中翻英 · 游戏本地化",
     showcase6_title: "无名者：屠龙",
     showcase6_desc: "中翻日 · 游戏本地化",
-    showcase7_title: "无依之地",
-    showcase7_desc: "英翻中 · 译著书籍",
-    showcase8_title: "时间的女儿",
-    showcase8_desc: "英翻中 · 译著书籍",
-    showcase9_title: "无法别离",
-    showcase9_desc: "英翻中 · 译著书籍",
-    showcase10_title: "半七捕物帐",
-    showcase10_desc: "日翻中 · 译著书籍",
-    showcase11_title: "爱书的下尅上 第一部：士兵的女儿",
-    showcase11_desc: "日翻中 · 译著书籍（轻小说）",
-    showcase12_title: "工匠之国",
-    showcase12_desc: "日翻中 · 译著书籍",
-    showcase13_title: "酸葡萄效应：为什么总有人莫名其妙地讨厌你",
-    showcase13_desc: "日翻中 · 译著书籍",
-    showcase14_title: "迷你裙宇宙海贼 第三、十、十一卷",
-    showcase14_desc: "日翻中 · 译著书籍（轻小说）",
+    showcase51_title: "无依之地",
+    showcase51_desc: "英翻中 · 译著书籍",
+    showcase52_title: "时间的女儿",
+    showcase52_desc: "英翻中 · 译著书籍",
+    showcase53_title: "无法别离",
+    showcase53_desc: "英翻中 · 译著书籍",
+    showcase54_title: "半七捕物帐",
+    showcase54_desc: "日翻中 · 译著书籍",
+    showcase55_title: "爱书的下尅上 第一部：士兵的女儿",
+    showcase55_desc: "日翻中 · 译著书籍（轻小说）",
+    showcase56_title: "工匠之国",
+    showcase56_desc: "日翻中 · 译著书籍",
+    showcase57_title: "酸葡萄效应：为什么总有人莫名其妙地讨厌你",
+    showcase57_desc: "日翻中 · 译著书籍",
     
     // About 页面
     about_title: "自我介绍",
       about_tagline1: "翻译 · 游戏本地化 · LQA",
-      about_tagline2: "中 日 · 英",
+      about_tagline2: "日 / 英 ➡ 简中",
       about_intro_p1: "你好，我是 Lynn！",
       about_intro_p2: "一位专注于\"说人话\"的译员。",
       about_intro_p3: "欢迎来到我的小展示厅，请随意参观！网站还在建设当中，我会努力再多写点关于自己的内容的。",
@@ -108,20 +106,101 @@ const I18N = {
     load_more: "查看更多作品",
     // 作品项描述
     work1_title: "FlOWERS 四季",
-    work1_desc: "JA→ZHCN · 开发商：Innocent Grey · 发行商：JAST",
-    work1_role: "翻译 / 审校 / LQA",
+    work1_desc: "日→中\n开发商：Innocent Grey\n发行商：JAST",
+    work1_role: "翻译 / 审校 / 润色 / LQA",
     
     work2_title: "幻兽帕鲁", 
-    work2_desc: "JA→ZHCN · 开发商：Pocket Pair · 发行商：Pocket Pair",
+    work2_desc: "日→中\n开发商：Pocket Pair\n发行商：Pocket Pair",
     work2_role: "审校",
 
     work3_title: "晨曦族人", 
-    work3_desc: "EN→ZHCN · 开发商：Darenn Keller · 发行商：Astra Logical",
+    work3_desc: "英→中\n开发商：Darenn Keller\n发行商：Astra Logical",
     work3_role: "翻译",
 
-    work4_title: "花开公路", 
-    work4_desc: "EN→ZHCN · 开发商：Studio Élan · 发行商：Studio Élan",
-    work4_role: "审校"
+    work4_title: "永恒终焉 4K/HD Edition", 
+    work4_desc: "日→中\n开发商：tri-Ace\n发行商：tri-Ace",
+    work4_role: "审校",
+
+    work5_title: "面包审判",
+    work5_desc: "中→英\n开发商： Toki \n发行商： Toki",
+    work5_role: "翻译",
+    
+    work6_title: "Monster Hunter Puzzles: Felyne Isles", 
+    work6_desc: "日→中\n开发商：CAPCOM\n发行商：CAPCOM",
+    work6_role: "翻译",
+
+    work7_title: "九段之都市传说", 
+    work7_desc: "日→中\n开发商：Sukera Sparo\n发行商：Sukera Sparo, PROTOTYPE",
+    work7_role: "翻译 / 审校 / 润色",
+
+    work8_title: "花开公路", 
+    work8_desc: "英→中\n开发商：Studio Élan\n发行商： Studio Élan",
+    work8_role: "翻译 / 审校 / 润色",
+
+    work9_title: "兽娘红茶馆",
+    work9_desc: "日→中\n开发商：Studio Lalala, Kotoneiro, WHO YOU\n发行商：Studio Lalala, FURYU Corporation",
+    work9_role: "翻译",
+    
+    work10_title: "黑莓蜜糖", 
+    work10_desc: "英→中\n开发商：ebi-hime\n发行商：ebi-hime",
+    work10_role: "翻译 / 审校 / 润色",
+
+    work11_title: "九龙妖魔学园纪ORIGIN OF ADVENTURE", 
+    work11_desc: "日→中\n开发商：TOYBOX\n发行商：Arc System Works",
+    work11_role: "审校",
+
+    work12_title: "超侦探事件簿雾雨谜宫", 
+    work12_desc: "日→中\n开发商：Spike Chunsoft Co., Ltd., Tookyo Games\n发行商：Spike Chunsoft Co., Ltd.",
+    work12_role: "翻译",
+
+    work13_title: "幻刃奇美拉", 
+    work13_desc: "日→中\n开发商：Team Ladybug, WSS playground\n发行商：PLAYISM, WSS playground",
+    work13_role: "LQA",
+
+    work14_title: "无名者：屠龙", 
+    work14_desc: "中→日\n开发商：The Nameless Epic\n发行商：WhisperGames",
+    work14_role: "翻译",
+
+    work15_title: "恋爱纽带",
+    work15_desc: "英→中\n开发商：Razzart Visual\n发行商：Razzart Visual",
+    work15_role: "翻译 / 审校 / 润色",
+
+    work16_title: "拔天海拓史 I · II HD Remaster", 
+    work16_desc: "日→中\n开发商：logicalbeat Co., Ltd.\n发行商：Bandai Namco Entertainment",
+    work16_role: "翻译 / 审校",
+    
+    //以下书籍
+    work51_title: "时间的女儿", 
+    work51_desc: "英→中\n作者：约瑟芬·铁伊\n出版社：中国友谊出版公司",
+    work51_role: "翻译",
+
+    work52_title: "半七捕物帐", 
+    work52_desc: "日→中\n作者：冈本绮堂\n出版社：北京联合出版公司",
+    work52_role: "翻译",
+
+    work53_title: "无依之地", 
+    work53_desc: "英→中\n作者：杰西卡·布鲁德\n出版社：江苏凤凰文艺出版社",
+    work53_role: "翻译",
+
+    work54_title: "无法别离",
+    work54_desc: "英→中\n作者：罗宾•本韦\n出版社：江苏凤凰文艺出版社",
+    work54_role: "翻译",
+    
+    work55_title: "工匠之国", 
+    work55_desc: "日→中\n作者：吉田光邦\n出版社：世界知识出版社",
+    work55_role: "翻译",
+
+    work56_title: "爱书的下尅上 第一部：士兵的女儿", 
+    work56_desc: "日→中\n作者：香月美夜\n出版社：北京时代华文书局",
+    work56_role: "翻译",
+
+    work57_title: "酸葡萄效应：为什么总有人莫名其妙地讨厌你", 
+    work57_desc: "日→中\n作者：榎本博明\n出版社：天津人民出版社",
+    work57_role: "翻译",
+
+    work58_title: "バテン・カイトス迷你裙宇宙海贼 第三、十、十一卷", 
+    work58_desc: "日→中\n作者：笹本祐一\n出版社：轻之文库（网络出版，现已不存）",
+    work58_role: "翻译"
     
   },
   en: {
@@ -147,7 +226,7 @@ const I18N = {
     adv3_d: "Born from passion, driven by craft and quality.",
     adv4_t: "Add later",
     adv4_d: "It's mid-night now. I'll come back after my brain gets some proper rest lol.",
-    showcase: "Showcase",
+    showcase: "Selected Projects",
     filter_all: "All",
     filter_ja_zh: "JA→ZHCN",
     filter_en_zh: "EN→ZHCN",
@@ -166,11 +245,29 @@ const I18N = {
     showcase3_desc: "EN→ZHCN · Game Localization",
     showcase4_title: "Highway Blossoms",
     showcase4_desc: "EN→ZHCN · Game Localization",
-    
+    showcase5_title: "Bread Judge",
+    showcase5_desc: "ZHCN→EN · Game Localization",
+    showcase6_title: "The Nameless: Slay Dragon",
+    showcase6_desc: "ZHCN→EN · Game Localization",
+    showcase51_title: "Nomadland: Surviving America in the Twenty-First Century",
+    showcase51_desc: "EN→ZHCN · Book Translation",
+    showcase52_title: "The Daughter of Time",
+    showcase52_desc: "EN→ZHCN · Book Translation",
+    showcase53_title: "Far from the Tree",
+    showcase53_desc: "EN→ZHCN · Book Translation",
+    showcase54_title: "The Curious Casebook of Inspector Hanshichi",
+    showcase54_desc: "JA→ZHCN · Book Translation",
+    showcase55_title: "Ascendance of a Bookworm\n"+"Part 1: Daughter of a Soldier",
+    showcase55_desc: "JA→ZHCN · Book Translation",
+    showcase56_title: "Nihon no Shokunin\n"+"(The Craftsman in Japan)",
+    showcase56_desc: "JA→ZHCN · Book Translation",
+    showcase57_title: "他人を引きずりおろすのに必死な人\n"+"(Those Who Desperately Pull Others Down)",
+    showcase57_desc: "JA→ZHCN · Book Translation",
+
     // About 页面
     about_title: "About Me",
       about_tagline1: "Translator · Game Localization",
-      about_tagline2: "CN ⇄ JA ⇄ EN",
+      about_tagline2: "JA / EN ➡ ZHCN",
       about_intro_p1: "Hi, I'm Lynn!",
       about_intro_p2: "- a translator who makes words sound just right.",
       about_intro_p3: "Welcome to my personal homepage! Just click around and take a casual look at my place, and I'll write more about myself soon enough ;)",
@@ -198,6 +295,7 @@ const I18N = {
     works_title: "Portfolio",
     works_role: "Role",
     load_more: "View More",
+    
     // 作品项描述
     work1_title: "FlOWERS Les Quatre Saisons (Shiki)",
     work1_desc: "JA→ZHCN \nDeveloper: Innocent Grey \nPublisher: JAST",
@@ -211,9 +309,91 @@ const I18N = {
     work3_desc: "EN→ZHCN \nDeveloper: Darenn Keller \nPublisher: Astra Logical",
     work3_role: "Translation",
 
-    work4_title: "Highway Blossoms", 
-    work4_desc: "EN→ZHCN \nDeveloper: Studio Élan \nPublisher: Studio Élan",
-    work4_role: "Translation / Editing"
+    work4_title: "Resonance of Fate 4K/HD Edition", 
+    work4_desc: "JA→ZHCN \nDeveloper: tri-Ace \nPublisher: tri-Ace",
+    work4_role: "Translation / Editing",
+
+    work5_title: "Bread Judge",
+    work5_desc: "ZHCN→EN\nDeveloper: Toki\nPublisher: Toki",
+    work5_role: "Translation",
+  
+    work6_title: "Monster Hunter Puzzles: Felyne Isles", 
+    work6_desc: "JA→ZHCN\nDeveloper: CAPCOM\nPublisher: CAPCOM",
+    work6_role: "Translation",
+
+    work7_title: "The Curse of Kudan", 
+    work7_desc: "JA→ZHCN\nDeveloper: Sukera Sparo\nPublisher: Sukera Sparo, PROTOTYPE",
+    work7_role: "Translation / Editing / Proofreading",
+
+    work8_title: "Highway Blossoms", 
+    work8_desc: "EN→ZHCN\nDeveloper: Studio Élan\nPublisher: Studio Élan",
+    work8_role: "Translation / Editing / Proofreading",
+
+    work9_title: "Kemono Teatime",
+    work9_desc: "JA→ZHCN\nDeveloper: Studio Lalala, Kotoneiro, WHO YOU\nPublisher: Studio Lalala, FURYU Corporation",
+    work9_role: "Translation",
+  
+    work10_title: "Blackberry Honey", 
+    work10_desc: "EN→ZHCN\nDeveloper: ebi-hime\nPublisher: ebi-hime",
+    work10_role: "Translation / Editing / Proofreading",
+
+    work11_title: "Kowloon High-School Chronicle: ORIGIN OF ADVENTURE", 
+    work11_desc: "JA→ZHCN\nDeveloper: TOYBOX\nPublisher: Arc System Works",
+    work11_role: "Editing / Proofreading",
+
+    work12_title: "Master Detective Archives: RAIN CODE", 
+    work12_desc: "JA→ZHCN\nDeveloper: Spike Chunsoft Co., Ltd., Tookyo Games\nPublisher: Spike Chunsoft Co., Ltd.",
+    work12_role: "Translation",
+
+    work13_title: "Blade Chimera", 
+    work13_desc: "JA→ZHCN\nDeveloper: Team Ladybug, WSS playground\nPublisher: PLAYISM, WSS playground",
+    work13_role: "LQA",
+
+    work14_title: "The Nameless: Slay Dragon", 
+    work14_desc: "ZHCN→JA\nDeveloper: The Nameless Epic\nPublisher: WhisperGames",
+    work14_role: "Translation",
+
+    work15_title: "Love Ribbon",
+    work15_desc: "EN→ZHCN\nDeveloper: Razzart Visual\nPublisher: Razzart Visual",
+    work15_role: "Translation / Editing / Proofreading",
+
+    work16_title: "Baten Kaitos I & II HD Remaster", 
+    work16_desc: "JA→ZHCN\nDeveloper: logicalbeat Co., Ltd.\nPublisher: Bandai Namco Entertainment",
+    work16_role: "Translation / Editing",
+  
+    //以下书籍
+    work51_title: "The Daughter of Time", 
+    work51_desc: "EN→ZHCN\nAuthor: Josephine Tey\nPublisher: China Friendship Publishing Company",
+    work51_role: "Translation",
+
+    work52_title: "The Curious Casebook of Inspector Hanshichi", 
+    work52_desc: "JA→ZHCN\nAuthor: Kidō Okamoto\nPublisher: Beijing United Publishing Company",
+    work52_role: "Translation",
+
+    work53_title: "Nomadland: Surviving America in the Twenty-First Century", 
+    work53_desc: "EN→ZHCN\nAuthor: Jessica Bruder\nPublisher: Jiangsu Phoenix Literature and Art Publishing House",
+    work53_role: "Translation",
+
+    work54_title: "Far from the Tree",
+    work54_desc: "EN→ZHCN\nAuthor: Robin Benway\nPublisher: Jiangsu Phoenix Literature and Art Publishing House",
+    work54_role: "Translation",
+  
+    work55_title: "The Craftsman in Japan (日本の職人)", 
+    work55_desc: "JA→ZHCN\nAuthor: Mitsukuni Yoshida\nPublisher: World Knowledge Press",
+    work55_role: "Translation",
+
+    work56_title: "Ascendance of a Bookworm Part 1: Daughter of a Soldier", 
+    work56_desc: "JA→ZHCN\nAuthor: Miya Kazuki\nPublisher: Beijing Times Chinese Press",
+    work56_role: "Translation",
+
+    work57_title: "Those Who Desperately Pull Others Down \n(他人を引きずりおろすのに必死な人)", 
+    work57_desc: "JA→ZHCN\nAuthor: Hiroaki Enomoto\nPublisher: Tianjin People's Publishing House",
+    work57_role: "Translation",
+
+    work58_title: "Bodacious Space Pirates Volumes 3, 10, 11", 
+    work58_desc: "JA→ZHCN\nAuthor: Yūichi Sasamoto\nPublisher: Light Novel Library (Online publication, no longer available)",
+    work58_role: "Translation"
+
   },
   ja: {
     nav_home: "ホーム",
@@ -257,26 +437,44 @@ const I18N = {
     showcase3_desc: "英→中 · ゲームローカライゼーション",
     showcase4_title: "Highway Blossoms",
     showcase4_desc: "英→中 · ゲームローカライゼーション",
+    showcase5_title: "逆転裁パン",
+    showcase5_desc: "中→英 · ゲームローカライゼーション",
+    showcase6_title: "無名者：屠竜",
+    showcase6_desc: "中→日 · ゲームローカライゼーション",
+    showcase51_title: "ノマド: 漂流する高齢労働者たち",
+    showcase51_desc: "英→中 · 翻訳作品（本）",
+    showcase52_title: "時の娘",
+    showcase52_desc: "英→中 · 翻訳作品（本）",
+    showcase53_title: "Far from the Tree\n"+"(木から遠く離れて)",
+    showcase53_desc: "英→中 · 翻訳作品（本）",
+    showcase54_title: "半七捕物帳",
+    showcase54_desc: "日→中 · 翻訳作品（本）",
+    showcase55_title: "本好きの下剋上 第一部 兵士の娘",
+    showcase55_desc: "日→中 · 翻訳作品（本）",
+    showcase56_title: "日本の職人",
+    showcase56_desc: "日→中 · 翻訳作品（本）",
+    showcase57_title: "他人を引きずりおろすのに必死な人",
+    showcase57_desc: "日→中 · 翻訳作品（本）",
     
     // About 页面
     about_title: "自己紹介",
       about_tagline1: "翻訳・ゲームローカライズ",
-      about_tagline2: "中 ⇄ 日 ⇄ 英",
+      about_tagline2: "日・英 ➡ 中",
       about_intro_p1: "こんにちは。Lynnです。私の個人サイトへようこそ！",
       about_intro_p2: "フリーランスの翻訳者として、言葉の奥にある想いをできるだけ自然な形で届けたい――そんな気持ちで日々仕事をしています。どうぞよろしくお願いします。",
       about_intro_p3: "このサイトはまだ制作途中で、今のところあまり多くのコンテンツはありませんが、少しずつ充実させていく予定です。よかったら、気軽にいろいろ見て回ってくださいね。",
 
     edu_title: "学歴",
-      edu1_period: "2008–2012",
-      edu1_school: "杭州電子科技大学",
-      edu1_degree: "経営学部 会計学科 卒業",
-      edu2_period: "2012–2013",
-      edu2_school: "ランカスター大学（英国）",
-      edu2_degree: "MSc in Management（Project Management）・Merit",
+      edu1_period: "2012 - 2013",
+      edu1_school: "ランカスター大学（英国）",
+      edu1_degree: "MSc in Management（Project Management）・Merit",
+      edu2_period: "2008 - 2012",
+      edu2_school: "杭州電子科技大学",
+      edu2_degree: "経営学部 会計学科 卒業",
 
     exp_title: "職歴",
       exp1_period: "2017 - 現在",
-      exp1_org: "フリーランス翻訳者（中日英）",
+      exp1_org: "フリーランス翻訳者（日・英 → 中）",
       exp1_desc: "これまでに、ゲーム・書籍・メディア記事・学術論文など多岐にわたる分野で、累計300万文字以上の翻訳を手がける\n"+"中国語、日本語、英語の3か国語における高品質な翻訳サービスを提供",
       exp2_period: "2015 - 2021",
       exp2_org: "聖アングレカム学院翻訳グループ",
@@ -292,19 +490,100 @@ const I18N = {
     // 作品项描述
     work1_title: "FlOWERS 四季",
     work1_desc: "日→中 \n開発元：Innocent Grey \n発売元：JAST",
-    work1_role: "翻訳 / レビュー / LQA",
+    work1_role: "翻訳 / 編集 / レビュー / LQA",
     
     work2_title: "パルワールド",
     work2_desc: "日→中 \n開発元：Pocket Pair \n発売元：Pocket Pair", 
-    work2_role: "レビュー",
+    work2_role: "編集",
 
     work3_title: "Dawnfolk",
     work3_desc: "英→中 \n開発元：Darenn Keller \n発売元：Astra Logical", 
     work3_role: "翻訳",
 
-    work4_title: "Highway Blossoms",
-    work4_desc: "英→中 \n開発元：Studio Élan \n発売元：Studio Élan", 
-    work4_role: "翻訳 / レビュー"
+    work4_title: "エンド オブ エタニティ",
+    work4_desc: "日→中 \n開発元：tri-Ace \n発売元：tri-Ace", 
+    work4_role: "編集",
+
+    work5_title: "逆転裁パン",
+    work5_desc: "中→英\n開発元：Toki\n発売元：Toki",
+    work5_role: "翻訳",
+  
+    work6_title: "Monster Hunter Puzzles: Felyne Isles", 
+    work6_desc: "日→中\n開発元：CAPCOM\n発売元：CAPCOM",
+    work6_role: "翻訳",
+
+    work7_title: "九段之都市伝説", 
+    work7_desc: "日→中\n開発元：Sukera Sparo\n発売元：Sukera Sparo, PROTOTYPE",
+    work7_role: "翻訳 / 編集 / レビュー",
+
+    work8_title: "Highway Blossoms", 
+    work8_desc: "英→中\n開発元：Studio Élan\n発売元：Studio Élan",
+    work8_role: "翻訳 / 編集 / レビュー ",
+
+    work9_title: "けものティータイム",
+    work9_desc: "日→中\n開発元：Studio Lalala, Kotoneiro, WHO YOU\n発売元：Studio Lalala, FURYU Corporation",
+    work9_role: "翻訳",
+  
+    work10_title: "Blackberry Honey", 
+    work10_desc: "英→中\n開発元：ebi-hime\n発売元：ebi-hime",
+    work10_role: "翻訳 / 編集 / レビュー",
+
+    work11_title: "九龍妖魔学園紀 ORIGIN OF ADVENTURE", 
+    work11_desc: "日→中\n開発元：TOYBOX\n発売元：Arc System Works",
+    work11_role: "編集",
+
+    work12_title: "超探偵事件簿 レインコード", 
+    work12_desc: "日→中\n開発元：Spike Chunsoft Co., Ltd., Tookyo Games\n発売元：Spike Chunsoft Co., Ltd.",
+    work12_role: "翻訳",
+
+    work13_title: "Blade Chimera", 
+    work13_desc: "日→中\n開発元：Team Ladybug, WSS playground\n発売元：PLAYISM, WSS playground",
+    work13_role: "LQA",
+
+    work14_title: "無名者：屠龍", 
+    work14_desc: "中→日\n開発元：The Nameless Epic\n発売元：WhisperGames",
+    work14_role: "翻訳",
+
+    work15_title: "Love Ribbon",
+    work15_desc: "英→中\n開発元：Razzart Visual\n発売元：Razzart Visual",
+    work15_role: "翻訳 / 編集 / レビュー",
+
+    work16_title: "バテン・カイトス I・II HD Remaster", 
+    work16_desc: "日→中\n開発元：logicalbeat Co., Ltd.\n発売元：Bandai Namco Entertainment",
+    work16_role: "翻訳 / 編集 ",
+  
+  //以下書籍
+    work51_title: "時の娘", 
+    work51_desc: "英→中\n著者：ジョゼフィン・テイ\n出版社：中国友誼出版公司",
+    work51_role: "翻訳",
+
+    work52_title: "半七捕物帳", 
+    work52_desc: "日→中\n著者：岡本綺堂\n出版社：北京聯合出版公司",
+    work52_role: "翻訳",
+
+    work53_title: "ノマドランド：21世紀アメリカを生き抜く", 
+    work53_desc: "英→中\n著者：ジェシカ・ブルーダー\n出版社：江蘇鳳凰文藝出版社",
+    work53_role: "翻訳",
+
+    work54_title: "木から遠く離れて（Far from the Tree）",
+    work54_desc: "英→中\n著者：ロビン・ベンウェイ\n出版社：江蘇鳳凰文藝出版社",
+    work54_role: "翻訳",
+  
+    work55_title: "日本の職人", 
+    work55_desc: "日→中\n著者：吉田光邦\n出版社：世界知識出版社",
+    work55_role: "翻訳",
+
+    work56_title: "本好きの下剋上 第一部 兵士の娘", 
+    work56_desc: "日→中\n著者：香月美夜\n出版社：北京時代華文書局",
+    work56_role: "翻訳",
+
+    work57_title: "他人を引きずりおろすのに必死な人", 
+    work57_desc: "日→中\n著者：榎本博明\n出版社：天津人民出版社",
+    work57_role: "翻訳",
+
+    work58_title: "ミニスカ宇宙海賊 第3・10・11巻", 
+    work58_desc: "日→中\n著者：笹本祐一\n出版社：軽之文庫（ネット出版、現在はもう存在しません）",
+    work58_role: "翻訳"
   }
 };
 
@@ -365,6 +644,80 @@ function applyLanguage(lang) {
       }
     });
   }, 100);
+}
+
+// Showcase 单排无缝滚动初始化
+// Showcase 单排无缝滚动初始化 - 简化版本
+function initShowcaseScroll(containerId, speed = 40) {
+  const showcaseContainer = document.getElementById(containerId);
+  if (!showcaseContainer) return;
+  
+  // 保存原始内容
+  const originalContent = showcaseContainer.innerHTML;
+  
+  // 复制一份内容实现无缝循环
+  showcaseContainer.innerHTML = originalContent + originalContent;
+  
+  // 使用事件委托来处理所有showcase项目的点击
+  showcaseContainer.addEventListener('click', (e) => {
+    const showcaseItem = e.target.closest('.showcase-item');
+    if (showcaseItem) {
+      const target = showcaseItem.getAttribute('data-target');
+      window.location.href = `works.html#${target}`;
+    }
+  });
+  
+  // 设置动画持续时间
+  showcaseContainer.style.animationDuration = `${speed}s`;
+  
+  // 绑定悬停控制
+  showcaseContainer.addEventListener('mouseenter', () => {
+    showcaseContainer.classList.add('paused');
+  });
+  
+  showcaseContainer.addEventListener('mouseleave', () => {
+    showcaseContainer.classList.remove('paused');
+  });
+  
+  return showcaseContainer;
+}
+
+// 初始化所有滚动区域
+function initAllShowcaseScrolls() {
+  // 第一排：游戏作品
+  initShowcaseScroll('gamesContainer', 35);
+  
+  // 第二排：书籍作品
+  initShowcaseScroll('booksContainer', 45);
+  
+  console.log('单排无缝滚动区域初始化完成');
+}
+
+// 替换原来的 initAutoScroll 函数调用
+function initAutoScroll() {
+  initAllShowcaseScrolls();
+}
+
+// showcase 点击事件
+function initShowcase() {
+  const showcaseItems = document.querySelectorAll('.showcase-item');
+  
+  showcaseItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const target = item.getAttribute('data-target');
+      window.location.href = `works.html#${target}`;
+    });
+    
+    // 添加键盘支持
+    item.setAttribute('tabindex', '0');
+    item.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        const target = item.getAttribute('data-target');
+        window.location.href = `works.html#${target}`;
+      }
+    });
+  });
 }
 
 // Works页面专用筛选函数 - 筛选时自动显示匹配的隐藏卡片
@@ -435,54 +788,6 @@ function updateLoadMoreVisibilityAfterFilter(currentFilter) {
   }
 }
 
-// showcase 点击事件
-function initShowcase() {
-  const showcaseItems = document.querySelectorAll('.showcase-item');
-  
-  showcaseItems.forEach(item => {
-    item.addEventListener('click', () => {
-      const target = item.getAttribute('data-target');
-      window.location.href = `works.html#${target}`;
-    });
-    
-    // 添加键盘支持
-    item.setAttribute('tabindex', '0');
-    item.addEventListener('keypress', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        const target = item.getAttribute('data-target');
-        window.location.href = `works.html#${target}`;
-      }
-    });
-  });
-}
-
-// Showcase自动滚动函数 - 双排版本
-function initAutoScroll() {
-  const showcaseContainer = document.querySelector('.showcase-container');
-  const showcaseRows = document.querySelectorAll('.showcase-row');
-  
-  if (!showcaseContainer || showcaseRows.length === 0) return;
-  
-  // 为双排布局：复制每一行的内容以实现无缝循环
-  showcaseRows.forEach(row => {
-    const clone = row.cloneNode(true);
-    showcaseContainer.appendChild(clone);
-  });
-  
-  // 添加自动滚动类
-  showcaseContainer.classList.add('auto-scroll');
-  
-  // 鼠标悬停时暂停滚动
-  showcaseContainer.addEventListener('mouseenter', () => {
-    showcaseContainer.classList.add('paused');
-  });
-  
-  showcaseContainer.addEventListener('mouseleave', () => {
-    showcaseContainer.classList.remove('paused');
-  });
-}
-
 // Education格式化功能
 function enhanceEduDegree() {
   console.log('enhanceEduDegree called');
@@ -543,6 +848,37 @@ function initWorksPage() {
   let currentVisibleCount = 6;
   let isLoading = false;
 
+  // 新增：检查URL中的锚点并滚动到对应作品
+  function scrollToTargetItem() {
+    const hash = window.location.hash;
+    if (hash) {
+      const targetId = hash.substring(1); // 去掉#号
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        // 如果目标元素是隐藏的，先显示它
+        if (targetElement.classList.contains('hidden')) {
+          targetElement.classList.remove('hidden');
+          targetElement.style.display = "";
+        }
+        
+        // 延迟滚动以确保元素已显示
+        setTimeout(() => {
+          targetElement.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'center'
+          });
+          
+          // 添加高亮效果
+          targetElement.style.transition = 'all 0.5s ease';
+          targetElement.style.boxShadow = '0 0 0 3px var(--brand)';
+          setTimeout(() => {
+            targetElement.style.boxShadow = '';
+          }, 2000);
+        }, 500);
+      }
+    }
+  }
+
   // 加载更多功能 - 只加载当前筛选条件下的隐藏卡片
   function loadMoreItems() {
     if (isLoading) return;
@@ -554,7 +890,7 @@ function initWorksPage() {
     loadMoreBtn.innerHTML = '<span class="loading-text">加载中...</span>';
     
     // 获取当前活跃的筛选条件
-    const activeFilter = document.querySelector('.filter-btn.active')?.getAttribute('data-filter') || 'all';
+    const activeFilter = document.querySelector('.filter-btn.active')?.getAttribute("data-filter") || 'all';
     
     // 只加载匹配当前筛选条件的隐藏卡片
     const allHiddenItems = worksGrid.querySelectorAll('.work-card.hidden');
@@ -597,6 +933,9 @@ function initWorksPage() {
       updateLoadMoreVisibilityAfterFilter(activeFilter);
       
       isLoading = false;
+
+      // 新增：加载更多后重新检查是否需要滚动到锚点
+      scrollToTargetItem();
     }, 500);
   }
   
@@ -678,6 +1017,12 @@ function initWorksPage() {
   
   // 初始化筛选器
   initWorksFilters();
+
+  // 新增：页面加载完成后检查锚点
+  window.addEventListener('load', scrollToTargetItem);
+  
+  // 新增：如果通过hashchange（比如从首页点击过来），也执行滚动
+  window.addEventListener('hashchange', scrollToTargetItem);
 }
 
 // 通用筛选函数（用于其他页面）
