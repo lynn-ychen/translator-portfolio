@@ -3,7 +3,7 @@
 const I18N = {
   zh: {
     nav_home: "首页",
-    nav_about: "关于",
+    nav_about: "关于我",
     nav_works: "作品一览", 
     nav_contact: "联系我",
     hero_hi: "你好！我是 Lynn\n一位专注于\"说人话\"的译员",
@@ -1078,4 +1078,5 @@ function initI18N() {
 }
 
 // DOM 加载完成后初始化
+
 document.addEventListener("DOMContentLoaded", initI18N);
