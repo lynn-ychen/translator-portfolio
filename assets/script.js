@@ -74,32 +74,43 @@ const I18N = {
     edu_title: "教育背景",
       edu1_period: "2012 - 2013",
       edu1_school: "兰开斯特大学（Lancaster University）",
-      edu1_degree: "管理学硕士（项目管理方向），以优异成绩毕业",
+      edu1_desc_line1: "管理学硕士（项目管理方向）",
+      edu1_desc_line2:"以优异成绩毕业",
 
       edu2_period: "2008 - 2012",
       edu2_school: "杭州电子科技大学",
-      edu2_degree: "管理学学士学位，会计专业",
+      edu2_desc_line1: "管理学学士学位，会计专业",
     exp_title: "工作经历",
-
       exp1_period: "2017 - 至今",
       exp1_org: "自由译者",
-      exp1_desc:
-      "提供中、日、英三语翻译服务，累计翻译量超过300万字\n" +
-      "作品体裁包括游戏、书籍、媒体文章、论文等多种类型",
+      exp1_desc_line1:"提供中、日、英三语翻译服务",
+      exp1_desc_line2:"累计翻译量超过300万字",
+      exp1_desc_line3:"体裁包括游戏、书籍、媒体文章、论文等多种类型",
 
-      exp2_period: "2015 - 2021",
-      exp2_org: "「圣彗星兰汉化组」- 核心成员",
-      exp2_desc:
-      "因兴趣开始录制百合游戏《FLOWERS》的实况视频并自行翻译、制作字幕，获得2000+粉丝\n" +
-      "与同伴组建「圣彗星兰学院汉化组」，翻译并制作《FLOWERS》汉化补丁，后因质量上乘、口碑优良而被官方选为官方汉化\n" +
-      "亦作为「白衣汉化组」成员参与多个游戏补丁的汉化工作",
+      exp2_period: "2016 - 2021",
+      exp2_org: "「圣彗星兰汉化组」创始成员",
+      exp2_desc_line1:"与同伴组建汉化组并制作《FLOWERS》汉化补丁",
+      exp2_desc_line2:"因翻译质量上乘而被游戏发行商选用作官方中文版",
+      exp2_desc_line3:"系列4作游戏累计处理文本超过100万字",
 
-      exp3_period: "2013 - 2015",
-      exp3_org: "杭州南森诚道信息咨询有限公司 - 高级顾问",
-      exp3_desc:
-      "提供出国留学相关咨询服务\n" +
-      "协助学生筛选国外院校，指导学生撰写相关申请文书",
+      exp3_period: "2017 - 2019",
+      exp3_org: "「白衣汉化组」核心成员",
+      exp3_desc_line1:"参与多个百合游戏的官方汉化工作",
+      exp3_desc_line2:"作品包括Highway Blossoms、Blackberry Honey等等",
 
+      exp4_period: "2015 - 2016",
+      exp4_org: "《FLOWERS》实况UP主",
+      exp4_desc_line1:"因兴趣开始录制《FLOWERS》的实况视频",
+      exp4_desc_line2:"自行翻译、制作字幕并迅速获得2000+粉丝",
+
+      exp5_period: "2013 - 2015",
+      exp5_org: "杭州南森诚道信息咨询有限公司 - 高级顾问",
+      exp5_desc_line1: "提供出国留学相关咨询服务",
+      exp5_desc_line2: "协助学生筛选国外院校，指导学生撰写相关申请文书",
+    
+    edu_tag: "教育经历",
+    work_tag:"工作经历",
+    timeline_title: "My Journey",
     email: "电子邮箱",
     
     // Works 页面
@@ -270,28 +281,51 @@ const I18N = {
 
     // About 页面
     about_title: "About Me",
-      about_tagline1: "Translator · Game Localization",
+      about_tagline1: "Translator · Game Localization · LQA",
       about_tagline2: "JA / EN ➡ ZHCN",
       about_intro_p1: "Hi, I'm Lynn!",
-      about_intro_p2: "- a translator who makes words sound just right.",
+      about_intro_p2: "A translator who makes words sound just right.",
       about_intro_p3: "Welcome to my personal homepage! Just click around and take a casual look at my place, and I'll write more about myself soon enough ;)",
     edu_title: "Education",
       edu1_period: "2012 - 2013",
       edu1_school: "Lancaster University (UK)",
-      edu1_degree: "MSc in Management with Project Management - Merit",
+      edu1_desc_line1: "MSc in Management with Project Management",
+      edu1_desc_line2: "Graduated with merit",
+
       edu2_period: "2008 - 2012",
       edu2_school: "Hangzhou Dianzi University",
-      edu2_degree: "Bachelor of Management, majored in Accounting",
+      edu2_desc_line1: "Bachelor of Management, majored in Accounting",
     exp_title: "Experience",
       exp1_period: "2017 - Present",
       exp1_org: "Freelance Translator",
-      exp1_desc: "Providing professional translation services in Chinese, Japanese, and English, with a cumulative translation volume exceeding 3 million words\n"+"Specialized in diverse fields including video games, books, media articles, and academic papers",
-      exp2_period: "2015 - 2021",
+      exp1_desc_line1: "Providing professional translation services in Chinese, Japanese, and English",
+      exp1_desc_line2: "3M+ words translated",
+      exp1_desc_line3: "Video games, books, media articles, academic papers, etc.",
+      
+      exp2_period: "2016 - 2021",
       exp2_org: "St. Angraecum Academy Fan Translation Group",
-      exp2_desc: "Started by creating and translating Let's Play videos for the yuri game FLOWERS, attracting 2,000+ followers\n"+"Co-founded a dedicated team for the FLOWERS series; the high-quality Chinese localization patch developed by the team gained significant community acclaim and was later officially adopted by the developer for its exceptional quality and reception\n"+"Also participated in several officially licensed localization projects as a member of the \"Hakui\" translation group",
-      exp3_period: "2013 - 2015",
-      exp3_org: "Hangzhou Nansen Information Consulting Co., Ltd.",
-      exp3_desc: "Advised clients on overseas study options and provided end-to-end application support\n"+"Guided students through university selection and provided expert coaching on the preparation and compelling of application documents",
+      exp2_desc_line1: "Co-founded group, created FLOWERS Chinese Translation patch",
+      exp2_desc_line2: "Patch later adopted as official Chinese version by publisher due to its high-quality",
+      exp2_desc_line3: "1M+ words across 4 games",
+      
+      exp3_period: "2017 - 2019",
+      exp3_org: "Hakui translation group",
+      exp3_desc_line1: "Participated in several officially licensed localization projects as a core member",
+      exp3_desc_line2: "Titles worked on: Highway Blossoms, Love Ribbons, Blackberry Honey, etc.",
+
+      exp4_period: "2015 - 2016",
+      exp4_org: "FLOWERS Gameplay Creator",
+      exp4_desc_line1: "Recorded FLOWERS gameplay videos",
+      exp4_desc_line2: "Added Self-translated subtitles, gaining 2000+ followers",
+
+      exp5_period: "2013 - 2015",
+      exp5_org: "Hangzhou Nansen Information Consulting Co., Ltd.",
+      exp5_desc_line1: "Advised clients on overseas study options and provided end-to-end application support",
+      exp5_desc_line2: "Guided students through university selection and provided expert coaching on the preparation and compelling of application documents",
+    
+    timeline_title: "My Journey",
+    work_tag: "Experience",
+    edu_tag: "Education",
     email: "Email",
   
     
@@ -464,7 +498,7 @@ const I18N = {
     
     // About 页面
     about_title: "自己紹介",
-      about_tagline1: "翻訳・ゲームローカライズ",
+      about_tagline1: "翻訳・ゲームローカライズ・LQA",
       about_tagline2: "日・英 ➡ 中",
       about_intro_p1: "こんにちは。Lynnです。私の個人サイトへようこそ！",
       about_intro_p2: "フリーランスの翻訳者として、言葉の奥にある想いをできるだけ自然な形で届けたい――そんな気持ちで日々仕事をしています。どうぞよろしくお願いします。",
@@ -473,21 +507,45 @@ const I18N = {
     edu_title: "学歴",
       edu1_period: "2012 - 2013",
       edu1_school: "ランカスター大学（英国）",
-      edu1_degree: "MSc in Management（Project Management）・Merit",
+      edu1_desc_line1: "経営学修士（プロジェクト管理）",
+      edu1_desc_line2: "優秀な成績で卒業",
+
       edu2_period: "2008 - 2012",
       edu2_school: "杭州電子科技大学",
-      edu2_degree: "経営学部 会計学科 卒業",
+      edu2_desc_line1: "経営学部 会計学科 卒業",
 
     exp_title: "職歴",
       exp1_period: "2017 - 現在",
       exp1_org: "フリーランス翻訳者（日・英 → 中）",
-      exp1_desc: "これまでに、ゲーム・書籍・メディア記事・学術論文など多岐にわたる分野で、累計300万文字以上の翻訳を手がける\n"+"中国語、日本語、英語の3か国語における高品質な翻訳サービスを提供",
-      exp2_period: "2015 - 2021",
-      exp2_org: "聖アングレカム学院翻訳グループ",
-      exp2_desc: "百合ゲーム『FLOWERS』の自主実況翻訳・字幕制作から活動を開始し、2,000人以上のフォロワーを獲得\n"+"その後、チームを結成して同作の中国語化パッチを開発。その品質の高さが評価され、公式版として正式採用される\n"+"その他、『白衣翻訳グループ』のメンバーとしても、複数ゲームの公式翻訳・ローカライズ作業に貢献",
-      exp3_period: "2013 - 2015",
-      exp3_org: "杭州南森誠道信息諮詢有限公司",
-      exp3_desc: "海外留学に関する総合的なコンサルティング業務を担当\n"+"クライアントの顧客のご要望に沿った留学先の提案から、願書をはじめとする申請書類の作成指導までを一貫して支援",
+      exp1_desc_line1: "中国語、日本語、英語の3か国語における高品質な翻訳サービスを提供",
+      exp1_desc_line2:"累計300万文字以上翻訳実績",
+      exp1_desc_line3:"ゲーム、書籍、メディア記事、論文など多様な分野の翻訳を担当",
+
+      exp2_period: "2016 - 2021",
+      exp2_org: "「聖アングレカム学院」翻訳グループ",
+      exp2_desc_line1: "仲間と共に同人翻訳チームを立ち上げ、『FLOWERS』中国語化パッチを開発",
+      exp2_desc_line2: "高品質な翻訳が評価され、公式版として採用される",
+      exp2_desc_line3: "シリーズ4作品で合計100万字以上のテキストを処理",
+
+      exp3_period: "2017 - 2019",
+      exp3_org: "「白衣」翻訳グループ", 
+      exp3_desc_line1: "コアメンバーとして、複数の百合系ゲーム公式ローカライズ作業に参加",
+      exp3_desc_line2: "『Highway Blossoms』『Blackberry Honey』などのタイトルを担当",
+      
+      exp4_period: "2015 - 2016",
+      exp4_org: "FLOWERS実況クリエイター",
+      exp4_desc_line1: "興味から《FLOWERS》の実況動画を制作・投稿開始",
+      exp4_desc_line2: "翻訳と字幕制作を自ら行い、短期間でフォロワー2000人以上を獲得",
+
+      exp5_period: "2013 - 2015",
+      exp5_org: "杭州南森誠道信息諮詢有限公司",
+      exp5_desc_line1: "海外留学に関するコンサルティングサービスを提供",
+      exp5_desc_line2:"学生の志望校選定を支援し、出願書類の作成を指導",
+
+      edu_tag: "学歴",
+      work_tag: "職歴", 
+      timeline_title: "My Journey",
+      email: "メール",
     
     // Works 页面
     works_title: "実績一覧",
@@ -652,8 +710,77 @@ function applyLanguage(lang) {
   }, 100);
 }
 
+// === 暗色模式切换功能 ===
+class ThemeManager {
+  constructor() {
+    this.themeToggle = document.getElementById('themeToggle');
+    this.themeIcon = this.themeToggle?.querySelector('.theme-icon');
+    this.init();
+  }
+
+  init() {
+    if (!this.themeToggle || !this.themeIcon) {
+      console.warn('Theme toggle elements not found');
+      return;
+    }
+
+    // 检查本地存储或系统偏好
+    const savedTheme = localStorage.getItem('theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    const initialTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+    this.setTheme(initialTheme);
+
+    // 添加点击事件
+    this.themeToggle.addEventListener('click', () => {
+      this.toggleTheme();
+    });
+
+    // 监听系统主题变化
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+      if (!localStorage.getItem('theme')) {
+        this.setTheme(e.matches ? 'dark' : 'light');
+      }
+    });
+  }
+
+  setTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+    this.updateIcon(theme);
+    
+    // 更新meta theme-color
+    this.updateThemeColor(theme);
+  }
+
+  toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    this.setTheme(newTheme);
+  }
+
+  updateIcon(theme) {
+    if (this.themeIcon) {
+      this.themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+    }
+  }
+
+  updateThemeColor(theme) {
+    // 更新移动端浏览器主题色
+    const themeColor = theme === 'dark' ? '#0a0a0a' : '#ffffff';
+    let metaThemeColor = document.querySelector('meta[name="theme-color"]');
+    
+    if (!metaThemeColor) {
+      metaThemeColor = document.createElement('meta');
+      metaThemeColor.name = 'theme-color';
+      document.head.appendChild(metaThemeColor);
+    }
+    
+    metaThemeColor.content = themeColor;
+  }
+}
+
 // Showcase 单排无缝滚动初始化
-// Showcase 单排无缝滚动初始化 - 简化版本
 function initShowcaseScroll(containerId, speed = 40) {
   const showcaseContainer = document.getElementById(containerId);
   if (!showcaseContainer) return;
@@ -723,6 +850,89 @@ function initShowcase() {
         window.location.href = `works.html#${target}`;
       }
     });
+  });
+}
+
+// About页面专用函数
+
+// 头像上传功能
+function initAvatarUpload() {
+  const avatarUpload = document.getElementById('avatarUpload');
+  const avatarImage = document.getElementById('avatarImage');
+  const avatarPlaceholder = document.getElementById('avatarPlaceholder');
+  
+  if (!avatarUpload || !avatarImage) return;
+  
+  avatarUpload.addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      
+      reader.onload = function(e) {
+        avatarImage.src = e.target.result;
+        avatarImage.style.display = 'block';
+        avatarPlaceholder.style.display = 'none';
+        
+        // 保存到本地存储
+        localStorage.setItem('userAvatar', e.target.result);
+      }
+      
+      reader.readAsDataURL(file);
+    }
+  });
+  
+  // 检查本地存储中是否有已保存的头像
+  const savedAvatar = localStorage.getItem('userAvatar');
+  if (savedAvatar) {
+    avatarImage.src = savedAvatar;
+    avatarImage.style.display = 'block';
+    avatarPlaceholder.style.display = 'none';
+  }
+}
+
+// 时间线动画功能
+function initTimelineAnimation() {
+  const timelineItems = document.querySelectorAll('.timeline-item');
+  console.log('初始化时间线动画，找到项目:', timelineItems.length);
+  
+  if (timelineItems.length === 0) {
+    console.warn('未找到时间线项目，请检查HTML结构');
+    return;
+  }
+
+  // 创建 Intersection Observer 来检测元素是否进入视口
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // 添加延迟，实现顺序动画效果
+        const index = Array.from(timelineItems).indexOf(entry.target);
+        setTimeout(() => {
+          entry.target.classList.add('animate');
+          console.log('时间线项目动画触发:', index);
+        }, index * 200); // 每个项目延迟200ms
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  });
+
+  // 观察所有时间线项目
+  timelineItems.forEach(item => {
+    observer.observe(item);
+  });
+
+  // 添加点击动画效果
+  timelineItems.forEach(item => {
+    const content = item.querySelector('.timeline-content');
+    if (content) {
+      content.addEventListener('click', () => {
+        content.style.transform = 'scale(0.95)';
+        setTimeout(() => {
+          content.style.transform = '';
+        }, 150);
+      });
+    }
   });
 }
 
@@ -843,7 +1053,6 @@ function enhanceExpDesc() {
 }
 
 // Works 页面功能
-// Works 页面功能 - 修正版本
 function initWorksPage() {
   const worksGrid = document.getElementById('worksGrid');
   const loadMoreBtn = document.getElementById('loadMoreBtn');
@@ -855,10 +1064,9 @@ function initWorksPage() {
   let currentVisibleCount = 6;
   let isLoading = false;
   let hasProcessedAnchor = false;
-  let anchorTargetId = null; // 新增：记录锚点目标ID
+  let anchorTargetId = null;
   
   function scrollToTargetItem() {
-    // 如果已经处理过锚点，不再重复处理
     if (hasProcessedAnchor) return;
     
     const hash = window.location.hash;
@@ -873,23 +1081,19 @@ function initWorksPage() {
       if (targetElement) {
         console.log('找到目标元素，准备智能显示和滚动');
         
-        // 标记已开始处理锚点并记录目标ID
         hasProcessedAnchor = true;
         anchorTargetId = targetId;
         
-        // 计算目标卡片在所有卡片中的索引
         const allCards = Array.from(worksGrid.querySelectorAll('.work-card'));
         const targetIndex = allCards.findIndex(card => card.id === targetId);
         console.log('目标卡片索引:', targetIndex);
         
         if (targetIndex !== -1) {
-          // 显示从开始到目标卡片的所有卡片（包括目标卡片）
           for (let i = 0; i <= targetIndex; i++) {
             const card = allCards[i];
             if (card.classList.contains('hidden')) {
               card.classList.remove('hidden');
               card.style.display = "";
-              // 添加淡入动画
               card.style.opacity = '0';
               card.style.transform = 'translateY(20px)';
               setTimeout(() => {
@@ -900,11 +1104,9 @@ function initWorksPage() {
             }
           }
           
-          // 更新当前可见数量
           currentVisibleCount = Math.max(currentVisibleCount, targetIndex + 1);
           console.log('更新后可见数量:', currentVisibleCount);
           
-          // 延迟滚动以确保所有卡片已显示
           setTimeout(() => {
             console.log('执行滚动到目标元素');
             targetElement.scrollIntoView({ 
@@ -912,17 +1114,14 @@ function initWorksPage() {
               block: 'center'
             });
             
-            // 添加高亮效果
             targetElement.style.transition = 'all 0.5s ease';
             targetElement.style.boxShadow = '0 0 0 3px var(--brand)';
             setTimeout(() => {
               targetElement.style.boxShadow = '';
-              // 高亮结束后，清除锚点目标ID，允许正常滚动
               anchorTargetId = null;
               console.log('锚点高亮完成，允许正常滚动');
             }, 2000);
             
-            // 更新加载更多按钮状态
             updateLoadMoreVisibilityAfterFilter('all');
             
           }, 800);
@@ -933,20 +1132,16 @@ function initWorksPage() {
     }
   }
 
-  // 加载更多功能 - 修正版本：避免锚点干扰
   function loadMoreItems() {
     if (isLoading) return;
     
     isLoading = true;
     
-    // 添加加载状态
     loadMoreBtn.disabled = true;
     loadMoreBtn.innerHTML = '<span class="loading-text">加载中...</span>';
     
-    // 获取当前活跃的筛选条件
     const activeFilter = document.querySelector('.filter-btn.active')?.getAttribute("data-filter") || 'all';
     
-    // 只加载匹配当前筛选条件的隐藏卡片
     const allHiddenItems = worksGrid.querySelectorAll('.work-card.hidden');
     const matchingHiddenItems = Array.from(allHiddenItems).filter(item => {
       const tag = item.getAttribute('data-tag');
@@ -973,28 +1168,21 @@ function initWorksPage() {
       
       currentVisibleCount += itemsToShow.length;
       
-      // 恢复按钮状态
       loadMoreBtn.disabled = false;
       loadMoreBtn.innerHTML = `
         <span class="load-more-text" data-i18n="load_more">Load More</span>
         <span class="load-more-arrow">↓</span>
       `;
       
-      // 更新多语言
       applyLanguage(pickLanguage());
       
-      // 检查是否还有更多可加载的卡片
       updateLoadMoreVisibilityAfterFilter(activeFilter);
       
       isLoading = false;
-
-      // 重要修改：加载更多后不再重新检查锚点滚动
-      // 只有在初次加载时才处理锚点
       console.log('加载更多完成，不重新触发锚点滚动');
     }, 500);
   }
   
-  // 返回顶部功能
   function initBackToTop() {
     if (!backToTopBtn) return;
     
@@ -1017,12 +1205,10 @@ function initWorksPage() {
     backToTopBtn.addEventListener('click', scrollToTop);
   }
   
-  // 自动加载 - 修正版本：避免锚点干扰
   function initAutoLoadOnScroll() {
     let autoLoadTriggered = false;
     
     function checkScroll() {
-      // 重要修改：如果当前有活跃的锚点目标，暂停自动加载
       if (isLoading || autoLoadTriggered || anchorTargetId) {
         console.log('暂停自动加载：锚点目标活跃中');
         return;
@@ -1054,7 +1240,6 @@ function initWorksPage() {
     window.addEventListener('scroll', debouncedCheckScroll);
   }
   
-  // 绑定事件
   loadMoreBtn.addEventListener('click', function() {
     this.style.transform = 'scale(0.95)';
     setTimeout(() => {
@@ -1066,7 +1251,6 @@ function initWorksPage() {
   initBackToTop();
   initAutoLoadOnScroll();
   
-  // 初始隐藏超出数量的卡片
   const allCards = worksGrid.querySelectorAll('.work-card');
   allCards.forEach((card, index) => {
     if (index >= currentVisibleCount) {
@@ -1074,36 +1258,27 @@ function initWorksPage() {
     }
   });
   
-  // 初始化筛选器
   initWorksFilters();
 
-  // 新增：清除URL哈希的函数
   function clearUrlHash() {
     if (window.location.hash) {
-      // 使用history.replaceState移除哈希，但不刷新页面
       history.replaceState(null, null, window.location.pathname + window.location.search);
       console.log('已清除URL哈希');
     }
   }
 
-  // 监听滚动事件，当用户主动滚动时清除锚点状态
   let userScrolled = false;
   window.addEventListener('scroll', () => {
     if (!userScrolled && hasProcessedAnchor) {
       userScrolled = true;
-      // 用户开始主动滚动，清除锚点目标ID允许正常自动加载
       anchorTargetId = null;
       console.log('用户主动滚动，允许正常自动加载');
       
-      // 可选：清除URL哈希
       setTimeout(clearUrlHash, 1000);
     }
   });
 
-  // 页面加载完成后检查锚点
   window.addEventListener('load', scrollToTargetItem);
-  
-  // 如果通过hashchange（比如从首页点击过来），也执行滚动
   window.addEventListener('hashchange', scrollToTargetItem);
 }
 
@@ -1115,11 +1290,9 @@ function initFilters() {
     btn.addEventListener("click", () => {
       const filter = btn.getAttribute("data-filter");
       
-      // 更新按钮状态
       filterButtons.forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
       
-      // 筛选首页的 .work 元素（小卡片）
       const indexWorks = document.querySelectorAll(".work");
       if (indexWorks.length > 0) {
         indexWorks.forEach(item => {
@@ -1131,12 +1304,16 @@ function initFilters() {
   });
 }
 
-// 初始化
+// === 初始化暗色模式 ===
+function initTheme() {
+  new ThemeManager();
+}
+
+// 主初始化函数
 function initI18N() {
   const currentLang = pickLanguage();
   applyLanguage(currentLang);
   
-  // 语言切换事件
   document.querySelectorAll("[data-lang]").forEach(btn => {
     btn.addEventListener("click", () => {
       const lang = btn.getAttribute("data-lang");
@@ -1144,20 +1321,26 @@ function initI18N() {
     });
   });
   
-  // 初始化筛选功能
   initFilters();
-  
-  // 初始化 showcase 点击事件
   initShowcase();
-  
-  // 初始化自动滚动
   initAutoScroll();
   
   // 初始化 Works 页面功能
   if (window.location.pathname.includes('works.html')) {
     initWorksPage();
   }
+  
+  // 初始化时间线动画 - 修正：确保在about页面调用
+  if (window.location.pathname.includes('about.html')) {
+    console.log('检测到about页面，初始化时间线动画');
+    initTimelineAnimation();
+    initAvatarUpload();
+  }
 }
 
 // DOM 加载完成后初始化
-document.addEventListener("DOMContentLoaded", initI18N);
+document.addEventListener("DOMContentLoaded", function() {
+  console.log('DOM加载完成，开始初始化');
+  initI18N();
+  initTheme();
+});
